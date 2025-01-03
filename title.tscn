@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0fgtpyd0kwk2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 304.0
+offset_top = 270.0
+offset_right = 394.0
+offset_bottom = 293.0
+text = "Title Screen"
