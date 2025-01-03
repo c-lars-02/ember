@@ -3,6 +3,7 @@ var step_size = 64 # Should match the tile size of the map; this is the move dis
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	safe_margin = 8
 	pass # Replace with function body.
 
 
