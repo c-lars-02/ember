@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://0fgtpyd0kwk2"]
+
+[ext_resource type="AudioStream" uid="uid://lpybap357c6x" path="res://resources/audio/delve.mp3" id="1_wt1e6"]
+[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://resources/gfx/reggy.jpg" id="2_atr4u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 304.0
+offset_top = 270.0
+offset_right = 394.0
+offset_bottom = 293.0
+text = "Title Screen"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_wt1e6")
+autoplay = true
+
+[node name="Reggy" type="Sprite2D" parent="."]
+position = Vector2(750, 342)
+scale = Vector2(0.478516, 0.485352)
+texture = ExtResource("2_atr4u")
