@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bdieog3kdgxqx"]
+[gd_scene load_steps=7 format=4 uid="uid://bdieog3kdgxqx"]
 
 [ext_resource type="Script" path="res://scenes/dungeon.gd" id="1_hm42q"]
 [ext_resource type="Texture2D" uid="uid://ck5akjsksj646" path="res://resources/gfx/test_map/tilesheet_complete.png" id="2_fva2q"]
 [ext_resource type="PackedScene" uid="uid://06l21cx8uhd2" path="res://scenes/dungeoneer.tscn" id="3_8pr5p"]
+[ext_resource type="AudioStream" uid="uid://dh31jr18adsud" path="res://resources/audio/tori.mp3" id="4_bunu8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qqk3y"]
 texture = ExtResource("2_fva2q")
@@ -288,3 +289,8 @@ tile_set = SubResource("TileSet_lb3ms")
 
 [node name="Node2D" parent="." instance=ExtResource("3_8pr5p")]
 position = Vector2(64, 64)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bunu8")
+volume_db = 12.0
+autoplay = true

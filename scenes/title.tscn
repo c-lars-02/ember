@@ -17,6 +17,7 @@ text = "Title Screen"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_wt1e6")
+volume_db = -4.0
 autoplay = true
 
 [node name="Reggy" type="Sprite2D" parent="."]
