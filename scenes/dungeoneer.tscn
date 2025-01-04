@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/dungeoneer.gd" id="1_y1uyg"]
 [ext_resource type="Texture2D" uid="uid://d2l3lfc0p6m2e" path="res://resources/gfx/icon.svg" id="2_lwmnw"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Dungeoneer" type="Node2D"]
 script = ExtResource("1_y1uyg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
