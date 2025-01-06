@@ -27,3 +27,5 @@ func _on_dungeoneer_moving() -> void:
 		$Layer1.show()
 		if view[1] == 0:
 			$Layer2.show()
+			if view[2] == 0:
+				$Layer3.show()
