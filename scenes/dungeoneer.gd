@@ -59,18 +59,48 @@ func _process(delta: float) -> void:
 		emit_signal("moving")
 
 
-func look():
-	var view = []
-		
-	for i in range(3):
-		var vantage = coordinates + CARDINAL_DIRECTIONS[orientation] * i
-		
-		var front = map.get_neighbor_cell(vantage, CARDINAL_NEIGHBORS[orientation])
-		var tile_data = map.get_cell_tile_data(front)
-		var tile_type = tile_data.get_custom_data("tile_type")
-		
-		view.append(tile_type)
+func get_cell_tile_type(cell: Vector2i):
+	return map.get_cell_tile_data(cell).get_custom_data("tile_type")
 	
-	return view
 	
+func look(): # TODO: Handle null instances coming up when exceeding bounds of the map
+	var views = []
+	
+	var depth_increment = CARDINAL_DIRECTIONS[orientation]
+	var lateral_positive = CARDINAL_DIRECTIONS[((orientation + 1) % 4)]
+	var lateral_negative = CARDINAL_DIRECTIONS[((orientation - 1) % 4)]
+	
+	var view_0 = []
+	view_0.append(get_cell_tile_type(coordinates + depth_increment))
+	view_0.append(get_cell_tile_type(coordinates + depth_increment + lateral_positive))
+	view_0.append(get_cell_tile_type(coordinates + depth_increment + lateral_negative))
+	views.append(view_0)
+	
+	var view_1 = []
+	view_1.append(get_cell_tile_type(coordinates + (depth_increment * 2)))
+	view_1.append(get_cell_tile_type(coordinates + (depth_increment * 2) + lateral_positive))
+	view_1.append(get_cell_tile_type(coordinates + (depth_increment * 2) + lateral_negative))
+	views.append(view_1)
+	
+	var view_2 = []
+	view_2.append(get_cell_tile_type(coordinates + (depth_increment * 3)))
+	view_2.append(get_cell_tile_type(coordinates + (depth_increment * 3) + lateral_positive))
+	view_2.append(get_cell_tile_type(coordinates + (depth_increment * 3) + lateral_negative))
+	view_2.append(get_cell_tile_type(coordinates + (depth_increment * 3) + (lateral_positive * 2)))
+	view_2.append(get_cell_tile_type(coordinates + (depth_increment * 3) + (lateral_negative * 2)))
+	views.append(view_2)
+	
+	var view_3 = []
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4)))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + lateral_positive))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + lateral_negative))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + (lateral_positive * 2)))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + (lateral_negative * 2)))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + (lateral_positive * 3)))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + (lateral_negative * 3)))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + (lateral_positive * 4)))
+	view_3.append(get_cell_tile_type(coordinates + (depth_increment * 4) + (lateral_negative * 4)))
+	views.append(view_3)
+	
+	return views
 	
