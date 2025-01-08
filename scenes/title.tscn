@@ -1,19 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://0fgtpyd0kwk2"]
+[gd_scene load_steps=6 format=3 uid="uid://0fgtpyd0kwk2"]
 
 [ext_resource type="Script" path="res://scenes/title.gd" id="1_0diwn"]
 [ext_resource type="AudioStream" uid="uid://lpybap357c6x" path="res://resources/audio/delve.mp3" id="1_wt1e6"]
 [ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://resources/gfx/reggy.jpg" id="2_atr4u"]
 [ext_resource type="Texture2D" uid="uid://bw23yneaggp6t" path="res://resources/gfx/Screenshot from 2024-03-11 18-52-43.png" id="3_tpt1f"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_iwnrx"]
+font_size = 64
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0diwn")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 304.0
-offset_top = 270.0
-offset_right = 394.0
-offset_bottom = 293.0
-text = "Title Screen"
+offset_left = 176.0
+offset_top = 104.0
+offset_right = 677.0
+offset_bottom = 192.0
+text = "Reggie Dungeon"
+label_settings = SubResource("LabelSettings_iwnrx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_wt1e6")
@@ -21,7 +25,7 @@ volume_db = -4.0
 autoplay = true
 
 [node name="Reggy" type="Sprite2D" parent="."]
-position = Vector2(1029, 550)
+position = Vector2(937, 532)
 scale = Vector2(0.478516, 0.485352)
 texture = ExtResource("2_atr4u")
 
@@ -31,10 +35,18 @@ position = Vector2(960, 536)
 texture = ExtResource("3_tpt1f")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 584.0
-offset_top = 869.0
-offset_right = 1417.0
-offset_bottom = 956.0
-text = "Play"
+offset_left = 784.0
+offset_top = 853.0
+offset_right = 1094.0
+offset_bottom = 918.0
+text = "Play Reggie Dungeon"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 804.0
+offset_top = 947.0
+offset_right = 1080.0
+offset_bottom = 1018.0
+text = "Play Reggie Dungeon 3D"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
