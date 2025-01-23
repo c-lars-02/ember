@@ -31,14 +31,15 @@ func generate_map():
 	var world = Node3D.new()
 	add_child(world)
 	$Dungeoneer.hide()
-	var cell = preload("res://scenes/cell.tscn")
-	var map = $TileMapLayer
+
+	var map = $terrain
 	map.hide()
 	var start_time = Time.get_ticks_msec()
 	for square in map.get_used_cells():
-		var new_cell = cell.instantiate()
 		var tile_data = map.get_cell_tile_data(square)
-		new_cell.mat = tile_data.get_custom_data("material")
+		var cell_scene_path = "res://scenes/cell_" + tile_data.get_custom_data("material") + ".tscn"
+		var cell_scene = load(cell_scene_path)
+		var new_cell = cell_scene.instantiate()
 		world.add_child(new_cell)
 		new_cell.set_owner(world)
 		new_cell.position.x = square.x * cell_size
@@ -51,4 +52,16 @@ func generate_map():
 			new_cell.get_child(5).show()
 		if map.get_cell_tile_data(Vector2(square.x, square.y - 1)) == null:
 			new_cell.get_child(3).show()
-	print("Map built in: ", (Time.get_ticks_msec() - start_time), " ms")
+	
+	for actor in $terrain/actors.get_used_cells():
+		var tile_data = $terrain/actors.get_cell_tile_data(actor)
+		var actor_scene_path = "res://scenes/actor_" + tile_data.get_custom_data("actor_type") + ".tscn"
+		print("actor_scene_path: ", actor_scene_path)
+		var actor_scene = load(actor_scene_path)
+		var new_actor = actor_scene.instantiate()
+		world.add_child(new_actor)
+		new_actor.set_owner(world)
+		new_actor.position.x = actor.x * cell_size
+		new_actor.position.z = actor.y * cell_size
+	
+	print("Map built and populated in: ", (Time.get_ticks_msec() - start_time), " ms")

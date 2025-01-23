@@ -11,7 +11,7 @@ signal moving
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	orientation = 2
-	map = $"../TileMapLayer"
+	map = $"../terrain"
 	
 	var x_coordinate = int(position.x) / step_size
 	var y_coordinate = int(position.y) / step_size

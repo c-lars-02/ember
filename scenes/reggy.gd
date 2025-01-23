@@ -1,4 +1,4 @@
-extends MeshInstance3D
+extends Node3D
 
 var cell_size = 3
 var walkspeed = 2

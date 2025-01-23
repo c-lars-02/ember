@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtpsxljimug0j"
+path="res://.godot/imported/chuchu_base.obj-693cfa2dc1001101a68ee159bfdebb94.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chuchu_base.obj-693cfa2dc1001101a68ee159bfdebb94.mesh"]
+
+source_file="res://resources/gfx/enemy/chuchu/chuchu_base.obj"
+dest_files=["res://.godot/imported/chuchu_base.obj-693cfa2dc1001101a68ee159bfdebb94.mesh", "res://.godot/imported/chuchu_base.obj-693cfa2dc1001101a68ee159bfdebb94.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

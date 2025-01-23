@@ -1,1330 +1,1064 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://jx7hvicwtk5q"]
 
-[ext_resource type="PackedScene" path="res://scenes/cell.tscn" id="1_vedyl"]
-[ext_resource type="Script" path="res://scenes/cell.gd" id="2_qt7by"]
+[ext_resource type="PackedScene" uid="uid://clskw70lcupwn" path="res://scenes/cell_brick.tscn" id="1_vedyl"]
 
-[node name="@Node3D@2" type="Node3D"]
+[node name="_Node3D_2" type="Node3D"]
 
-[node name="Node3D" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
-script = ExtResource("2_qt7by")
+[node name="Node3D" parent="." instance=ExtResource("1_vedyl")]
 mat = "brick"
 
-[node name="@Node3D@3" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@3" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@4" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@4" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@5" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@5" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@6" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@6" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@7" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@7" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@8" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@8" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@9" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@9" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@10" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@10" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@11" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@11" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@12" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@12" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@13" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@13" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@14" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@14" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@15" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@15" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@16" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@16" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@17" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@17" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@18" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@18" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@19" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@19" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@20" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@20" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@21" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@21" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@22" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@22" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@23" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@23" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@24" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@24" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@25" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@25" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@26" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@26" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@27" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@27" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@28" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@28" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@29" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@29" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@30" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@30" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@31" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@31" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@32" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@32" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@33" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@33" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@34" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@34" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@35" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@35" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@36" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@36" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@37" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@37" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@38" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@38" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@39" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@39" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@40" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@40" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@41" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@41" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@42" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@42" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@43" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@43" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@44" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@44" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@45" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@45" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@46" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@46" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@47" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@47" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@48" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@48" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@49" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@49" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@50" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@50" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@51" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@51" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@52" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@52" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@53" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@53" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@54" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@54" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@55" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@55" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@56" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@56" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@57" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@57" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@58" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@58" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@59" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@59" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@60" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@60" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@61" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@61" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@62" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@62" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@63" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@63" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@64" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@64" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@65" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@65" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@66" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@66" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@67" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@67" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@68" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@68" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@69" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@69" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@70" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@70" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@71" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@71" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@72" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@72" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@73" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@73" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@74" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@74" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@75" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@75" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@76" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@76" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@77" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@77" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@78" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@78" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@79" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@79" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@80" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@80" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@81" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@81" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 45)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@82" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@82" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@83" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@83" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@84" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@84" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@85" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@85" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@86" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@86" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@87" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@87" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@88" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@88" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@89" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@89" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@90" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@90" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@91" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@91" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@92" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@92" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@93" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@93" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@94" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@94" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@95" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@95" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@96" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@96" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 45)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@97" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@97" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@98" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@98" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@99" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@99" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@100" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@100" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@101" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@101" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@102" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@102" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 45)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@103" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@103" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@104" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@104" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@105" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@105" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@106" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@106" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@107" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@107" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@108" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@108" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@109" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@109" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@110" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@110" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@111" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@111" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@112" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@112" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@113" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@113" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@114" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@114" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@115" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@115" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@116" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@116" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@117" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@117" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@118" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@118" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@119" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@119" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@120" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@120" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@121" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@121" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@122" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@122" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@123" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@123" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@124" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@124" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@125" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@125" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@126" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@126" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@127" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@127" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@128" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@128" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@129" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@129" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@130" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@130" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@131" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@131" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@132" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@132" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@133" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@133" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@134" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@134" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@135" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@135" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@136" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@136" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@137" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@137" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@138" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@138" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@139" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@139" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@140" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@140" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@141" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@141" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@142" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@142" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@143" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@143" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@144" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@144" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@145" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@145" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@146" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@146" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@147" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@147" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@148" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@148" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@149" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@149" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@150" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@150" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@151" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@151" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@152" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@152" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@153" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@153" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@154" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@154" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@155" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@155" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@156" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@156" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@157" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@157" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@158" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@158" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@159" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@159" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@160" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@160" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 45)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@161" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@161" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@162" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@162" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@163" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@163" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@164" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@164" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@165" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@165" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@166" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@166" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@167" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@167" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@168" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@168" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@169" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@169" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@170" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@170" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@171" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@171" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@172" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@172" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@173" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@173" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@174" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@174" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@175" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@175" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@176" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@176" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@177" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@177" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@178" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@178" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@179" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@179" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@180" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@180" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@181" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@181" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@182" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@182" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@183" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@183" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@184" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@184" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@185" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@185" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@186" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@186" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@187" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@187" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@188" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@188" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@189" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@189" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@190" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@190" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@191" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@191" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@192" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@192" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@193" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@193" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@194" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@194" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@195" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@195" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@196" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@196" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@197" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@197" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@198" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@198" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@199" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@199" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@200" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@200" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@201" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@201" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@202" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@202" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@203" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@203" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@204" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@204" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@205" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@205" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@206" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@206" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, -6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@207" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@207" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@208" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@208" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@209" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@209" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@210" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@210" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@211" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@211" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@212" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@212" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@213" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@213" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@214" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@214" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@215" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@215" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@216" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@216" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@217" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@217" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@218" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@218" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@219" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@219" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@220" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@220" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@221" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@221" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@222" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@222" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@223" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@223" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@224" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@224" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 12)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@225" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@225" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, -15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@226" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@226" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, -12)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@227" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@227" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, -9)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@228" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@228" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, -6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@229" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@229" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@230" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@230" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@231" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@231" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@232" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@232" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@233" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@233" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@234" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@234" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@235" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@235" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@236" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@236" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@237" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@237" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@238" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@238" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@239" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@239" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@240" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@240" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@241" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@241" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@242" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@242" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@243" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@243" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@244" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@244" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 0, 45)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@245" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@245" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -15)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@246" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@246" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -12)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@247" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@247" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -9)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@248" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@248" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@249" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@249" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@250" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@250" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 0)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@251" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@251" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 3)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@252" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@252" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 6)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@253" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@253" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 9)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@254" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@254" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 15)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@255" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@255" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 18)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@256" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@256" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 21)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@257" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@257" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 24)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@258" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@258" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 27)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@259" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@259" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 30)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@260" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@260" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 33)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@261" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@261" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 36)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@262" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@262" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 39)
-script = ExtResource("2_qt7by")
 mat = "brick_window"
 
-[node name="@Node3D@263" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@263" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@264" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@264" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, 45)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@265" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@265" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"
 
-[node name="@Node3D@266" type="Node3D" parent="." instance=ExtResource("1_vedyl")]
+[node name="@Node3D@266" parent="." instance=ExtResource("1_vedyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 42)
-script = ExtResource("2_qt7by")
 mat = "brick"

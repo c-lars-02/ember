@@ -5,3 +5,4 @@
 [resource]
 albedo_texture = ExtResource("1_x6dlm")
 anisotropy = 1.0
+texture_filter = 5

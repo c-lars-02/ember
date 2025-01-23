@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvt3f2a4ylhlr"]
+
+[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://resources/gfx/reggy.jpg" id="1_d128c"]
+[ext_resource type="Script" path="res://scenes/reggy.gd" id="2_loc5f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85ijx"]
+albedo_texture = ExtResource("1_d128c")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e0pj0"]
+material = SubResource("StandardMaterial3D_85ijx")
+height = 1.82
+
+[node name="reggy" type="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.91, 0)
+mesh = SubResource("CapsuleMesh_e0pj0")
+script = ExtResource("2_loc5f")
+
+[node name="lakitu cam" type="Camera3D" parent="."]
+transform = Transform3D(-1, -2.18557e-08, -1.57277e-07, -9.75661e-08, 0.866025, 0.5, 1.25278e-07, 0.5, -0.866025, 0, 3, -4.064)
+
+[node name="front cam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 4)
+
+[node name="reggy eyes" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.79, 0)
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.75, 0, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 12.599
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.69, 0)
+light_color = Color(1, 0.466667, 0.36, 1)
+light_volumetric_fog_energy = 0.0

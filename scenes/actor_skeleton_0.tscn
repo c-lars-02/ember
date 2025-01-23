@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://chio28fmgl5wm"]
+
+[ext_resource type="Texture2D" uid="uid://cms1kcly348dr" path="res://resources/gfx/enemy/skeleton.png" id="1_lc4r5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70io3"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_lc4r5")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_6wrsp"]
+material = SubResource("StandardMaterial3D_70io3")
+size = Vector2(1.82, 1.82)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -4.37114e-08, 3.55271e-15, 4.37114e-08, 1, -4.37114e-08, 0, 4.37114e-08, 1, 0, 0.91, 0)
+visible = false
+mesh = SubResource("QuadMesh_6wrsp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+pixel_size = 0.002
+billboard = 2
+shaded = true
+alpha_cut = 3
+texture = ExtResource("1_lc4r5")
