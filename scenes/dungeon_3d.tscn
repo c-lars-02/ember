@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://b1jbqedynlb1k"]
+[gd_scene load_steps=8 format=4 uid="uid://b1jbqedynlb1k"]
 
-[ext_resource type="Script" path="res://scenes/node_3d.gd" id="1_p01u8"]
+[ext_resource type="Script" uid="uid://kbwt50c87gam" path="res://scenes/node_3d.gd" id="1_p01u8"]
 [ext_resource type="PackedScene" uid="uid://7u2av8cmlaao" path="res://scenes/terrain_map.tscn" id="2_wuysx"]
 [ext_resource type="PackedScene" uid="uid://06l21cx8uhd2" path="res://scenes/dungeoneer.tscn" id="3_46epn"]
-[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://resources/gfx/reggy.jpg" id="3_i8oh6"]
-[ext_resource type="Script" path="res://scenes/reggy.gd" id="4_2vki2"]
+[ext_resource type="PackedScene" uid="uid://cvt3f2a4ylhlr" path="res://scenes/reggy.tscn" id="5_lirax"]
 [ext_resource type="AudioStream" uid="uid://dh31jr18adsud" path="res://resources/audio/tori.mp3" id="5_urhdq"]
-[ext_resource type="PackedScene" uid="uid://bhlibesm0qf4a" path="res://scenes/wow_button.tscn" id="7_1yw0c"]
+[ext_resource type="PackedScene" uid="uid://bhlibesm0qf4a" path="res://scenes/wow_button.tscn" id="6_dnqax"]
 
 [sub_resource type="Environment" id="Environment_xe672"]
 ambient_light_source = 2
@@ -16,13 +15,8 @@ ssao_enabled = true
 sdfgi_read_sky_light = false
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 0.02
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85ijx"]
-albedo_texture = ExtResource("3_i8oh6")
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_e0pj0"]
-material = SubResource("StandardMaterial3D_85ijx")
-height = 1.82
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
 
 [node name="Dungeon 3D" type="Node3D"]
 script = ExtResource("1_p01u8")
@@ -31,7 +25,8 @@ script = ExtResource("1_p01u8")
 environment = SubResource("Environment_xe672")
 
 [node name="terrain" parent="." instance=ExtResource("2_wuysx")]
-tile_map_data = PackedByteArray("AAAAAAAAAAAQAAUAAAAAAAEAAAAQAAUAAAAAAAIAAAAQAAUAAAAAAAMAAAAQAAUAAAAAAAQAAAAQAAUAAAAAAAUAAAAQAAUAAAAAAAYAAAARAAUAAAABAAIAAAAQAAUAAAABAAMAAAAQAAUAAAABAAQAAAAQAAUAAAABAAUAAAAQAAUAAAABAAYAAAAQAAUAAAACAAIAAAAQAAUAAAACAAMAAAARAAUAAAACAAQAAAAQAAUAAAACAAUAAAARAAUAAAACAAYAAAAQAAUAAAD//wIAAAAQAAUAAAD//wMAAAAQAAUAAAD//wQAAAAQAAUAAAD//wUAAAAQAAUAAAD//wYAAAAQAAUAAAD+/wYAAAAQAAUAAAD+/wUAAAARAAUAAAD+/wQAAAAQAAUAAAD+/wMAAAARAAUAAAD+/wIAAAAQAAUAAAA=")
+visible = false
+tile_map_data = PackedByteArray("AAAAAAAAAAAQAAUAAAAAAAEAAAAQAAUAAAAAAAIAAAAQAAUAAAAAAAMAAAAQAAUAAAAAAAQAAAAQAAUAAAAAAAUAAAAQAAUAAAAAAAYAAAARAAUAAAAAAAgAAAAVAAkAAAAAAAkAAAAQAAUAAAAAAAoAAAARAAUAAAABAAAAAAAQAAUAAAABAAIAAAARAAUAAAABAAMAAAAQAAUAAAABAAQAAAAQAAUAAAABAAUAAAAQAAUAAAABAAYAAAAQAAUAAAABAAcAAAAVAAkAAAABAAgAAAAVAAkAAAABAAoAAAARAAUAAAACAAAAAAAVAAkAAAACAAIAAAAQAAUAAAACAAMAAAARAAUAAAACAAQAAAAQAAUAAAACAAUAAAARAAUAAAACAAYAAAAQAAUAAAACAAoAAAAQAAUAAAADAAAAAAAQAAUAAAADAAoAAAARAAUAAAAEAAAAAAAQAAUAAAAEAAEAAAAQAAUAAAAEAAIAAAAVAAkAAAAEAAMAAAAQAAUAAAAEAAQAAAAVAAkAAAAEAAUAAAAQAAUAAAAEAAYAAAAVAAkAAAAEAAcAAAAQAAUAAAAEAAgAAAAVAAkAAAAEAAkAAAAQAAUAAAAEAAoAAAAQAAUAAAD//wAAAAAQAAUAAAD//wIAAAARAAUAAAD//wMAAAAQAAUAAAD//wQAAAAQAAUAAAD//wUAAAAQAAUAAAD//wYAAAAQAAUAAAD//wcAAAAVAAkAAAD//wgAAAAVAAkAAAD//woAAAARAAUAAAD+/woAAAAQAAUAAAD+/wYAAAAQAAUAAAD+/wUAAAARAAUAAAD+/wQAAAAQAAUAAAD+/wMAAAARAAUAAAD+/wIAAAAQAAUAAAD+/wAAAAAVAAkAAAD8/wMAAAAQAAUAAAD8/wEAAAAQAAUAAAD8/wAAAAAQAAUAAAD8/wIAAAAVAAkAAAD8/wQAAAAVAAkAAAD8/wUAAAAQAAUAAAD8/wYAAAAVAAkAAAD8/wcAAAAQAAUAAAD8/wgAAAAVAAkAAAD8/wkAAAAQAAUAAAD8/woAAAAQAAUAAAD9/woAAAARAAUAAAD9/wAAAAAQAAUAAAA=")
 
 [node name="actors" parent="terrain" index="0"]
 tile_map_data = PackedByteArray("AAD+/wMAAAAAAAAAAAACAAMAAAAAAAAAAAACAAUAAAAAAAAAAAD+/wUAAAAAAAAAAAAAAAYAAAAAAAAAAAD+/wQAAAAAAAAAAAACAAQAAAAAAAAAAAACAAIAAAAAAAAAAAD+/wIAAAAAAAAAAAACAAYAAAAAAAAAAAD+/wYAAAAAAAAAAAA=")
@@ -39,36 +34,15 @@ tile_map_data = PackedByteArray("AAD+/wMAAAAAAAAAAAACAAMAAAAAAAAAAAACAAUAAAAAAAA
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_urhdq")
 volume_db = 16.0
+autoplay = true
 
 [node name="Dungeoneer" parent="." instance=ExtResource("3_46epn")]
+visible = false
 
-[node name="reggy" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.91, 0)
-script = ExtResource("4_2vki2")
+[node name="CharacterBody3D" parent="." instance=ExtResource("5_lirax")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 0, 0, 0)
 
-[node name="reggy_body" type="MeshInstance3D" parent="reggy"]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_e0pj0")
-skeleton = NodePath("../..")
-
-[node name="lakitu cam" type="Camera3D" parent="reggy"]
-transform = Transform3D(-1, -2.18557e-08, -1.57277e-07, -9.75661e-08, 0.866025, 0.5, 1.25278e-07, 0.5, -0.866025, 4.26326e-14, 3, -4.064)
-
-[node name="front cam" type="Camera3D" parent="reggy"]
-transform = Transform3D(1, 5.32907e-15, -1.06581e-14, 0, 0.866025, 0.5, 1.06581e-14, -0.5, 0.866025, -4.26326e-14, 3, 4)
-
-[node name="reggy eyes" type="Camera3D" parent="reggy"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.79, 0)
-current = true
-
-[node name="OmniLight3D" type="OmniLight3D" parent="reggy"]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0, 0)
-light_color = Color(1, 0.75, 0, 1)
-light_energy = 2.0
-light_volumetric_fog_energy = 0.0
-omni_range = 16.0
-
-[node name="wow_button" parent="reggy" instance=ExtResource("7_1yw0c")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.79, 3)
+[node name="wow_button" parent="CharacterBody3D" instance=ExtResource("6_dnqax")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 1.7, 0)
 
 [editable path="terrain"]

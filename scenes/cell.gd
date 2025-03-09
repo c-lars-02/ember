@@ -2,6 +2,9 @@ extends Node3D
 
 @export var mat = ""
 
+var compass = {0: "front", 1: "right", 2: "back", 3: "left"}
+var walls = [0, 0, 0, 0]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if mat != "":
@@ -15,3 +18,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func toggle_wall(wall: int):
+	var wall_node = get_node(compass[wall])
+	if walls[wall] == 0:
+		wall_node.show()
+		get_node(compass[wall] + "/StaticBody3D/CollisionShape3D").disabled = false
+	elif walls[wall] == 1:
+		wall_node.hide()
+		get_node(compass[wall] + "/StaticBody3D/CollisionShape3D").disabled = true

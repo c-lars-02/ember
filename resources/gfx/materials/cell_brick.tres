@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bq22wox10tiej"]
 
-[ext_resource type="Texture2D" uid="uid://bosoi2dxvcmvh" path="res://resources/gfx/brick_03/Layer 2/center_2.png" id="1_x6dlm"]
+[ext_resource type="Texture2D" uid="uid://bosoi2dxvcmvh" path="res://resources/gfx/brick_03/Layer 2/center_2.png" id="1_kii35"]
 
 [resource]
-albedo_texture = ExtResource("1_x6dlm")
+albedo_texture = ExtResource("1_kii35")
 anisotropy = 1.0
 texture_filter = 5
