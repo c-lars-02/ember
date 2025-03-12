@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://chio28fmgl5wm"]
+[gd_scene load_steps=5 format=3 uid="uid://chio28fmgl5wm"]
 
 [ext_resource type="Texture2D" uid="uid://cms1kcly348dr" path="res://resources/gfx/enemy/skeleton.png" id="1_lc4r5"]
 
@@ -13,7 +13,9 @@ billboard_mode = 1
 material = SubResource("StandardMaterial3D_70io3")
 size = Vector2(1.82, 1.82)
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h3e7m"]
+
+[node name="Node3D" type="CharacterBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, -4.37114e-08, 3.55271e-15, 4.37114e-08, 1, -4.37114e-08, 0, 4.37114e-08, 1, 0, 0.91, 0)
@@ -27,3 +29,9 @@ billboard = 2
 shaded = true
 alpha_cut = 3
 texture = ExtResource("1_lc4r5")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_h3e7m")

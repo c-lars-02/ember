@@ -53,5 +53,12 @@ func movement_3d(delta: float):
 	velocity += gravity * Vector3.DOWN
 	
 	move_and_slide()
-		
-	print("rotation: ", rotation, "position: ", position)
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	velocity = -velocity * 10
+	move_and_slide()
+	$"reggy mouth".play()
+	$blood.emitting = true
+	await get_tree().create_timer(0.05).timeout
+	$blood.emitting = false

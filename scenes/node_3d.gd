@@ -5,6 +5,7 @@ var cell_size = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	generate_map()
 	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
@@ -20,7 +21,9 @@ func _process(delta: float) -> void:
 			scene.pack(node_to_save)
 			
 			ResourceSaver.save(scene, "res://map_export.tscn")
-
+		if Input.is_action_just_pressed("pause"):
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			get_tree().paused = true
 
 #func _on_tile_map_layer_changed() -> void: # Doesn't work for dynamic map changes; signal isn't emitted when editing from Godot editor
 	#print("TileMapLayer changed!")
@@ -32,7 +35,6 @@ func _process(delta: float) -> void:
 func generate_map():
 	var world = Node3D.new()
 	add_child(world)
-	$Dungeoneer.hide()
 
 	var map = $terrain
 	map.hide()

@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://m870lfyhsesf"]
+[gd_scene load_steps=9 format=3 uid="uid://m870lfyhsesf"]
 
 [ext_resource type="Script" uid="uid://cn4ptmbjg8oaa" path="res://scenes/cell.gd" id="1_ic84h"]
 [ext_resource type="Material" uid="uid://bq22wox10tiej" path="res://resources/gfx/materials/cell_brick.tres" id="1_t6upx"]
+[ext_resource type="ArrayOccluder3D" uid="uid://v8vtmclhng04" path="res://scenes/cell_brick_torch.occ" id="3_jpiw0"]
+[ext_resource type="PackedScene" uid="uid://df4bay8fugxv0" path="res://scenes/torch.tscn" id="3_wfg0n"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4wxu7"]
 material = ExtResource("1_t6upx")
@@ -10,48 +12,9 @@ size = Vector2(3, 3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_la44y"]
 size = Vector3(1, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mujnc"]
-albedo_color = Color(0.49, 0.3185, 0, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_mc4vk"]
-material = SubResource("StandardMaterial3D_mujnc")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3war"]
-shading_mode = 0
-albedo_color = Color(1, 0.65, 0, 1)
-disable_receive_shadows = true
-
-[sub_resource type="PrismMesh" id="PrismMesh_mm65q"]
-material = SubResource("StandardMaterial3D_a3war")
-
-[sub_resource type="Gradient" id="Gradient_vwidf"]
-colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_8glul"]
-gradient = SubResource("Gradient_vwidf")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nu2we"]
-angle_min = -600.7
-angle_max = -600.7
-direction = Vector3(0, 0, -1)
-spread = 16.0
-initial_velocity_min = 0.5
-initial_velocity_max = 1.5
-gravity = Vector3(0, 0, 0)
-color = Color(1, 0.916667, 0, 1)
-color_initial_ramp = SubResource("GradientTexture1D_8glul")
-collision_mode = 1
-collision_friction = 0.0
-collision_bounce = 0.5
-collision_use_scale = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56x38"]
-shading_mode = 0
-vertex_color_use_as_albedo = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_5f25t"]
-material = SubResource("StandardMaterial3D_56x38")
-size = Vector3(0.01, 0.01, 0.01)
+[sub_resource type="ArrayOccluder3D" id="ArrayOccluder3D_encny"]
+vertices = PackedVector3Array(1.5, 0, 1.5, -1.5, 0, 1.5, 1.5, 0, -1.5, -1.5, 0, -1.5)
+indices = PackedInt32Array(0, 1, 2, 1, 3, 2)
 
 [sub_resource type="FogMaterial" id="FogMaterial_3ykyu"]
 density = 1.5
@@ -73,33 +36,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_la44y")
 disabled = true
 
-[node name="torch" type="Node3D" parent="front"]
+[node name="torch" parent="front" instance=ExtResource("3_wfg0n")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="front/torch"]
-transform = Transform3D(0.1, 1.68959e-08, -1.59995e-09, -1.59995e-09, 0.141481, 0.0866025, 5.97109e-09, -0.245052, 0.05, -2.14361e-09, 0.04904, 0)
-mesh = SubResource("CylinderMesh_mc4vk")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="front/torch"]
-transform = Transform3D(-0.119064, 1.23316e-08, -2.11752e-09, 1.90497e-09, 0.103261, 0.114618, -7.10943e-09, -0.178854, 0.0661747, -0.00137329, 0.216003, -0.315976)
-mesh = SubResource("PrismMesh_mm65q")
-skeleton = NodePath("../..")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="front/torch"]
-transform = Transform3D(1, 7.10543e-15, 3.55271e-15, -7.10543e-15, 1, -1.91069e-15, -3.55271e-15, 1.91069e-15, 1, 2.01081e-09, 0.214503, -0.281811)
-light_color = Color(1, 0.433333, 0, 1)
-shadow_enabled = true
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="front/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(3, 1, 3)
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="front/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43382e-08, 0.225186, -0.328019)
-lifetime = 1.5
-fixed_fps = 20
-process_material = SubResource("ParticleProcessMaterial_nu2we")
-draw_pass_1 = SubResource("BoxMesh_5f25t")
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="front"]
+occluder = ExtResource("3_jpiw0")
 
 [node name="right" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 1.02324e-07, -4.37114e-08, 4.37114e-08, -1.96036e-14, -1, -8.74228e-08, -1, 3.19744e-14, 0, 1.5, 1.5)
@@ -114,33 +54,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_la44y")
 disabled = true
 
-[node name="torch" type="Node3D" parent="right"]
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="right"]
+occluder = ExtResource("3_jpiw0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="right/torch"]
-transform = Transform3D(0.1, 1.68959e-08, -1.59995e-09, -1.59995e-09, 0.141481, 0.0866025, 5.97109e-09, -0.245052, 0.05, -2.14361e-09, 0.04904, 0)
-mesh = SubResource("CylinderMesh_mc4vk")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="right/torch"]
-transform = Transform3D(-0.119064, 1.23316e-08, -2.11752e-09, 1.90497e-09, 0.103261, 0.114618, -7.10943e-09, -0.178854, 0.0661747, -0.00137329, 0.216003, -0.315976)
-mesh = SubResource("PrismMesh_mm65q")
-skeleton = NodePath("../..")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="right/torch"]
-transform = Transform3D(1, 7.10543e-15, 3.55271e-15, -7.10543e-15, 1, -1.91069e-15, -3.55271e-15, 1.91069e-15, 1, 2.01081e-09, 0.214503, -0.281811)
-light_color = Color(1, 0.433333, 0, 1)
-shadow_enabled = true
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="right/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(3, 1, 3)
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="right/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43382e-08, 0.225186, -0.328019)
-lifetime = 1.5
-fixed_fps = 20
-process_material = SubResource("ParticleProcessMaterial_nu2we")
-draw_pass_1 = SubResource("BoxMesh_5f25t")
+[node name="torch" parent="right" instance=ExtResource("3_wfg0n")]
 
 [node name="back" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -1.5, 1.5, 0)
@@ -154,33 +71,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_la44y")
 disabled = true
 
-[node name="torch" type="Node3D" parent="back"]
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="back"]
+occluder = ExtResource("3_jpiw0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="back/torch"]
-transform = Transform3D(0.1, 1.68959e-08, -1.59995e-09, -1.59995e-09, 0.141481, 0.0866025, 5.97109e-09, -0.245052, 0.05, -2.14361e-09, 0.04904, 0)
-mesh = SubResource("CylinderMesh_mc4vk")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="back/torch"]
-transform = Transform3D(-0.119064, 1.23316e-08, -2.11752e-09, 1.90497e-09, 0.103261, 0.114618, -7.10943e-09, -0.178854, 0.0661747, -0.00137329, 0.216003, -0.315976)
-mesh = SubResource("PrismMesh_mm65q")
-skeleton = NodePath("../..")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="back/torch"]
-transform = Transform3D(1, 7.10543e-15, 3.55271e-15, -7.10543e-15, 1, -1.91069e-15, -3.55271e-15, 1.91069e-15, 1, 2.01081e-09, 0.214503, -0.281811)
-light_color = Color(1, 0.433333, 0, 1)
-shadow_enabled = true
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="back/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(3, 1, 3)
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="back/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43382e-08, 0.225186, -0.328019)
-lifetime = 1.5
-fixed_fps = 20
-process_material = SubResource("ParticleProcessMaterial_nu2we")
-draw_pass_1 = SubResource("BoxMesh_5f25t")
+[node name="torch" parent="back" instance=ExtResource("3_wfg0n")]
 
 [node name="left" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, -1.50996e-07, 8.74227e-08, 8.74227e-08, 4.37114e-08, -1, 1.50996e-07, 1, 4.37114e-08, 0, 1.5, -1.5)
@@ -195,33 +89,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_la44y")
 disabled = true
 
-[node name="torch" type="Node3D" parent="left"]
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="left"]
+occluder = ExtResource("3_jpiw0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="left/torch"]
-transform = Transform3D(0.1, 1.68959e-08, -1.59995e-09, -1.59995e-09, 0.141481, 0.0866025, 5.97109e-09, -0.245052, 0.05, -2.14361e-09, 0.04904, 0)
-mesh = SubResource("CylinderMesh_mc4vk")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="left/torch"]
-transform = Transform3D(-0.119064, 1.23316e-08, -2.11752e-09, 1.90497e-09, 0.103261, 0.114618, -7.10943e-09, -0.178854, 0.0661747, -0.00137329, 0.216003, -0.315976)
-mesh = SubResource("PrismMesh_mm65q")
-skeleton = NodePath("../..")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="left/torch"]
-transform = Transform3D(1, 7.10543e-15, 3.55271e-15, -7.10543e-15, 1, -1.91069e-15, -3.55271e-15, 1.91069e-15, 1, 2.01081e-09, 0.214503, -0.281811)
-light_color = Color(1, 0.433333, 0, 1)
-shadow_enabled = true
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="left/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(3, 1, 3)
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="left/torch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43382e-08, 0.225186, -0.328019)
-lifetime = 1.5
-fixed_fps = 20
-process_material = SubResource("ParticleProcessMaterial_nu2we")
-draw_pass_1 = SubResource("BoxMesh_5f25t")
+[node name="torch" parent="left" instance=ExtResource("3_wfg0n")]
 
 [node name="floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_4wxu7")
@@ -231,6 +102,9 @@ mesh = SubResource("PlaneMesh_4wxu7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_la44y")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="floor"]
+occluder = SubResource("ArrayOccluder3D_encny")
 
 [node name="ceiling" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 3, 0)
@@ -251,3 +125,6 @@ size = Vector3(3, 1, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 size = Vector3(3, 0.5, 3)
 material = SubResource("FogMaterial_3ykyu")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="ceiling"]
+occluder = SubResource("ArrayOccluder3D_encny")
