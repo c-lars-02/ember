@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bnly5uqbvtqg3"]
 
-[ext_resource type="Script" uid="uid://b0p3gcesyxelj" path="res://scenes/settings.gd" id="1_5p8wc"]
-[ext_resource type="Script" uid="uid://pfopgmc4i573" path="res://scenes/h_slider.gd" id="2_f4mfi"]
-[ext_resource type="Script" uid="uid://c81kv81kckgkb" path="res://scenes/label_2_rd.gd" id="2_r6d6q"]
-[ext_resource type="Script" uid="uid://mf8xak5pkpca" path="res://scenes/label_3.gd" id="3_6wm04"]
+[ext_resource type="Script" uid="uid://b0p3gcesyxelj" path="res://scripts/settings.gd" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://pfopgmc4i573" path="res://scripts/h_slider.gd" id="2_f4mfi"]
+[ext_resource type="Script" uid="uid://c81kv81kckgkb" path="res://scripts/label_2_rd.gd" id="2_r6d6q"]
+[ext_resource type="Script" uid="uid://mf8xak5pkpca" path="res://scripts/label_3.gd" id="3_6wm04"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5p8wc")

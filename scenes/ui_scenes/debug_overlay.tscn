@@ -2,7 +2,7 @@
 
 [ext_resource type="LabelSettings" uid="uid://c1pklwsnlripg" path="res://settings/debug_overlay.tres" id="1_nrmko"]
 [ext_resource type="Script" uid="uid://dy5k0rlr06m3j" path="res://label.gd" id="1_wl0fn"]
-[ext_resource type="Script" uid="uid://bep6x4s5qo8og" path="res://scenes/label_2.gd" id="2_2gvpf"]
+[ext_resource type="Script" uid="uid://bep6x4s5qo8og" path="res://scripts/label_2.gd" id="2_2gvpf"]
 
 [node name="Node2D" type="Node2D"]
 

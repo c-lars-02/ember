@@ -41,7 +41,7 @@ func generate_map():
 	var start_time = Time.get_ticks_msec()
 	for square in map.get_used_cells():
 		var tile_data = map.get_cell_tile_data(square)
-		var cell_scene_path = "res://scenes/cell_" + tile_data.get_custom_data("material") + ".tscn"
+		var cell_scene_path = "res://scenes/terrain/cell_" + tile_data.get_custom_data("material") + ".tscn"
 		var cell_scene = load(cell_scene_path)
 		var new_cell = cell_scene.instantiate()
 		world.add_child(new_cell)
@@ -63,7 +63,7 @@ func generate_map():
 	
 	for actor in $terrain/actors.get_used_cells():
 		var tile_data = $terrain/actors.get_cell_tile_data(actor)
-		var actor_scene_path = "res://scenes/actor_" + tile_data.get_custom_data("actor_type") + ".tscn"
+		var actor_scene_path = "res://scenes/actors/actor_" + tile_data.get_custom_data("actor_type") + ".tscn"
 		print("actor_scene_path: ", actor_scene_path)
 		var actor_scene = load(actor_scene_path)
 		var new_actor = actor_scene.instantiate()

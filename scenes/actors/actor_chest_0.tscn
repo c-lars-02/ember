@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://qoomwvgu7bgu"]
 
-[ext_resource type="ArrayMesh" uid="uid://by51rfxmvijma" path="res://gfx/object/chest_Cube.res" id="1_c4urh"]
+[ext_resource type="ArrayMesh" uid="uid://by51rfxmvijma" path="res://gfx/object/chest_Cube.res" id="1_7tb58"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-2.27518e-08, 0, 0.687919, 0, 0.764659, 0, -0.520502, 0, -3.00699e-08, 0, 0, 0)
-mesh = ExtResource("1_c4urh")
+mesh = ExtResource("1_7tb58")

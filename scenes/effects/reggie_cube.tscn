@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bf4y26v170qvj"]
 
-[ext_resource type="Script" uid="uid://344e30kuyu6" path="res://scenes/reggy_cube.gd" id="1_4ju0m"]
+[ext_resource type="Script" uid="uid://344e30kuyu6" path="res://scripts/reggy_cube.gd" id="1_4ju0m"]
 [ext_resource type="Texture2D" uid="uid://cyf8s0cjf428n" path="res://gfx/sprites/reggy_small.png" id="1_wll3n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ju0m"]

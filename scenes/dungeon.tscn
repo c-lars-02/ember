@@ -1,32 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://bdieog3kdgxqx"]
+[gd_scene load_steps=6 format=3 uid="uid://dli8yqdoh2k1u"]
 
-[ext_resource type="Script" uid="uid://bhxj0hm3yy6uu" path="res://scenes/dungeon.gd" id="1_hm42q"]
-[ext_resource type="PackedScene" uid="uid://h7qt8mya7qws" path="res://scenes/tile_map.tscn" id="2_dx0yk"]
-[ext_resource type="PackedScene" uid="uid://06l21cx8uhd2" path="res://scenes/dungeoneer.tscn" id="3_8pr5p"]
-[ext_resource type="AudioStream" path="res://resources/audio/tori.mp3" id="4_bunu8"]
-[ext_resource type="Script" uid="uid://bxcg1xed1cy6n" path="res://scenes/dungeon_beholder.gd" id="5_bbhue"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 0/center.png" id="6_iidim"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/ceiling_1.png" id="7_dnfge"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/floor_1.png" id="8_hsr4n"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/left_1.png" id="9_mt26d"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/right_1.png" id="10_ardy1"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/center_1.png" id="11_fay1f"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/half_left_1.png" id="12_nic02"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 1/half_right_1.png" id="13_pwp35"]
+[ext_resource type="Script" uid="uid://bhxj0hm3yy6uu" path="res://scripts/dungeon.gd" id="1_hm42q"]
+[ext_resource type="PackedScene" uid="uid://bcqdsuln610ye" path="res://scenes/tile_map.tscn" id="2_dx0yk"]
+[ext_resource type="PackedScene" uid="uid://bp68cmrm5ee61" path="res://scenes/dungeoneer.tscn" id="3_8pr5p"]
+[ext_resource type="Script" uid="uid://bxcg1xed1cy6n" path="res://scripts/dungeon_beholder.gd" id="5_bbhue"]
 [ext_resource type="Texture2D" uid="uid://bosoi2dxvcmvh" path="res://gfx/textures/brick.png" id="14_cpb0c"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 2/floor_2.png" id="15_uddst"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 2/left_2.png" id="16_oxprr"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 2/right_2.png" id="17_ueauo"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 2/ceiling_2.png" id="18_qehun"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 2/half_right_2.png" id="19_wxg2g"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 2/half_left_2.png" id="20_nw0c5"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/floor_3.png" id="21_iexk2"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/center_3.png" id="22_agecf"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/left_3.png" id="23_6qngc"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/right_3.png" id="24_m183p"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/ceiling_3.png" id="25_ud3kc"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/half_left_3.png" id="26_lt27d"]
-[ext_resource type="Texture2D" path="res://resources/gfx/brick_03/Layer 3/half_right_3.png" id="27_p570l"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hm42q")
@@ -37,7 +15,6 @@ script = ExtResource("1_hm42q")
 position = Vector2(96, 96)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_bunu8")
 volume_db = 12.0
 
 [node name="Dungeon Beholder" type="Node2D" parent="."]
@@ -49,44 +26,36 @@ script = ExtResource("5_bbhue")
 [node name="center" type="Sprite2D" parent="Dungeon Beholder/Layer0"]
 z_index = 7
 position = Vector2(480, 256)
-texture = ExtResource("6_iidim")
 
 [node name="Layer1" type="Node2D" parent="Dungeon Beholder"]
 
 [node name="ceiling" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 6
 position = Vector2(480, 64)
-texture = ExtResource("7_dnfge")
 
 [node name="floor" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 6
 position = Vector2(480, 448)
-texture = ExtResource("8_hsr4n")
 
 [node name="left" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 6
 position = Vector2(288, 256)
-texture = ExtResource("9_mt26d")
 
 [node name="right" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 6
 position = Vector2(672, 256)
-texture = ExtResource("10_ardy1")
 
 [node name="center" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 5
 position = Vector2(480, 256)
-texture = ExtResource("11_fay1f")
 
 [node name="right_front" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 5
 position = Vector2(672, 256)
-texture = ExtResource("12_nic02")
 
 [node name="left_front" type="Sprite2D" parent="Dungeon Beholder/Layer1"]
 z_index = 5
 position = Vector2(288, 256)
-texture = ExtResource("13_pwp35")
 
 [node name="Layer2" type="Node2D" parent="Dungeon Beholder"]
 
@@ -98,22 +67,18 @@ texture = ExtResource("14_cpb0c")
 [node name="floor" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 4
 position = Vector2(480, 352)
-texture = ExtResource("15_uddst")
 
 [node name="left" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 4
 position = Vector2(384, 256)
-texture = ExtResource("16_oxprr")
 
 [node name="right" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 4
 position = Vector2(576, 256)
-texture = ExtResource("17_ueauo")
 
 [node name="ceiling" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 4
 position = Vector2(480, 160)
-texture = ExtResource("18_qehun")
 
 [node name="left_front_1" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 3
@@ -123,7 +88,6 @@ texture = ExtResource("14_cpb0c")
 [node name="left_front_2" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 3
 position = Vector2(256, 256)
-texture = ExtResource("19_wxg2g")
 
 [node name="right_front_1" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 3
@@ -133,73 +97,59 @@ texture = ExtResource("14_cpb0c")
 [node name="right_front_2" type="Sprite2D" parent="Dungeon Beholder/Layer2"]
 z_index = 3
 position = Vector2(704, 256)
-texture = ExtResource("20_nw0c5")
 
 [node name="Layer3" type="Node2D" parent="Dungeon Beholder"]
 
 [node name="floor" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 2
 position = Vector2(480, 304)
-texture = ExtResource("21_iexk2")
 
 [node name="center" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(480, 256)
-texture = ExtResource("22_agecf")
 
 [node name="left" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 2
 position = Vector2(432, 256)
-texture = ExtResource("23_6qngc")
 
 [node name="right" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 2
 position = Vector2(528, 256)
-texture = ExtResource("24_m183p")
 
 [node name="ceiling" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 2
 position = Vector2(480, 208)
-texture = ExtResource("25_ud3kc")
 
 [node name="left_front_1" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(416, 256)
-texture = ExtResource("22_agecf")
 
 [node name="right_front_1" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(544, 256)
-texture = ExtResource("22_agecf")
 
 [node name="left_front_2" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(352, 256)
-texture = ExtResource("22_agecf")
 
 [node name="right_front_2" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(608, 256)
-texture = ExtResource("22_agecf")
 
 [node name="left_front_3" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(672, 256)
-texture = ExtResource("22_agecf")
 
 [node name="right_front_3" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(288, 256)
-texture = ExtResource("22_agecf")
 
 [node name="right_front_4" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(720, 256)
-texture = ExtResource("26_lt27d")
 
 [node name="left_front_4" type="Sprite2D" parent="Dungeon Beholder/Layer3"]
 z_index = 1
 position = Vector2(240, 256)
-texture = ExtResource("27_p570l")
 
 [connection signal="moving" from="dungeoneer" to="Dungeon Beholder" method="_on_dungeoneer_moving"]

@@ -13,7 +13,7 @@ config_version=5
 config/name="ember"
 run/main_scene="uid://0fgtpyd0kwk2"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/image="res://gfx/ui/Alpacaman_VN.png"
+boot_splash/image="res://gfx/ui_gfx/Alpacaman_VN.png"
 config/icon="res://gfx/sprites/icon.svg"
 boot_splash/minimum_display_time=16
 

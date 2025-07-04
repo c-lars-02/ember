@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw23yneaggp6t"
-path="res://.godot/imported/dinosaur_planet_sky.png-fd2d0b99177b582f00ed5f75f97da2bb.ctex"
+uid="uid://0esj0c6nmlbn"
+path="res://.godot/imported/Alpacaman_VN.png-f1ce7842eb34922854260b27ff2079ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/ui/dinosaur_planet_sky.png"
-dest_files=["res://.godot/imported/dinosaur_planet_sky.png-fd2d0b99177b582f00ed5f75f97da2bb.ctex"]
+source_file="res://gfx/ui_gfx/Alpacaman_VN.png"
+dest_files=["res://.godot/imported/Alpacaman_VN.png-f1ce7842eb34922854260b27ff2079ae.ctex"]
 
 [params]
 
