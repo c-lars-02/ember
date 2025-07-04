@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://chio28fmgl5wm"]
 
-[ext_resource type="Texture2D" uid="uid://cms1kcly348dr" path="res://resources/gfx/enemy/skeleton.png" id="1_lc4r5"]
+[ext_resource type="Texture2D" uid="uid://cms1kcly348dr" path="res://gfx/sprites/skeleton.png" id="1_lc4r5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70io3"]
 transparency = 2

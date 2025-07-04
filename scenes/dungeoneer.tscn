@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://06l21cx8uhd2"]
 
-[ext_resource type="Script" path="res://scenes/dungeoneer.gd" id="1_y1uyg"]
-[ext_resource type="Texture2D" uid="uid://cyf8s0cjf428n" path="res://resources/gfx/reggy_small.png" id="2_u1wfe"]
+[ext_resource type="Script" uid="uid://dst2rb2lgxdod" path="res://scenes/dungeoneer.gd" id="1_y1uyg"]
+[ext_resource type="Texture2D" uid="uid://cyf8s0cjf428n" path="res://gfx/sprites/reggy_small.png" id="2_u1wfe"]
 
 [node name="Dungeoneer" type="Node2D"]
 position = Vector2(32, 32)

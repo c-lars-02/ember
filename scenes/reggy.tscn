@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cvt3f2a4ylhlr"]
 
-[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://resources/gfx/reggy.jpg" id="1_d128c"]
+[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://gfx/sprites/reggy.jpg" id="1_d128c"]
 [ext_resource type="Script" uid="uid://1sxaujdp080j" path="res://scenes/reggy.gd" id="2_loc5f"]
 [ext_resource type="PackedScene" uid="uid://sl43y870he2f" path="res://scenes/blood.tscn" id="3_hcwon"]
-[ext_resource type="AudioStream" uid="uid://dbwbmpitd3tlf" path="res://resources/audio/Cowhurt2.ogg" id="4_u8bq0"]
+[ext_resource type="AudioStream" uid="uid://dbwbmpitd3tlf" path="res://audio/Cowhurt2.ogg" id="4_u8bq0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85ijx"]
 albedo_texture = ExtResource("1_d128c")
@@ -45,6 +45,7 @@ mesh = SubResource("BoxMesh_3b88h")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.91, 0)
 light_color = Color(1, 0.75, 0, 1)
+light_energy = 2.0
 light_volumetric_fog_energy = 0.0
 omni_range = 12.599
 
@@ -66,7 +67,7 @@ shape = SubResource("CapsuleShape3D_bpsab")
 [node name="reggy flashlight" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 0, 1, -1)
 visible = false
-light_energy = 3.0
+light_energy = 5.0
 spot_range = 10.0
 spot_angle = 24.0
 

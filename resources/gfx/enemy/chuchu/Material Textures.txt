@@ -1,7 +1,0 @@
-Material 0:
-Textures: sp_chuchu_00, sp1_chuchu_00
-Meshes: nodes_3_
-
-Material 1:
-Textures: sp_chuchu_00, sp1_chuchu_00
-Meshes: nodes_2_

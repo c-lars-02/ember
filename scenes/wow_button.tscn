@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bhlibesm0qf4a"]
 
 [ext_resource type="Script" uid="uid://bhjr2p5su6erb" path="res://scenes/wow_button.gd" id="1_epebv"]
-[ext_resource type="AudioStream" uid="uid://b600i7f0ivyw1" path="res://resources/audio/anime-wow-sound-effect.mp3" id="2_xhnf3"]
+[ext_resource type="AudioStream" uid="uid://cl5junt84123f" path="res://audio/wow.ogg" id="2_ryshy"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oa8r1"]
 direction = Vector3(0, 0, 0)
@@ -68,4 +68,4 @@ process_material = SubResource("ParticleProcessMaterial_oa8r1")
 draw_pass_1 = SubResource("TextMesh_4sc08")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_xhnf3")
+stream = ExtResource("2_ryshy")

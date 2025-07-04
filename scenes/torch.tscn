@@ -1,4 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://df4bay8fugxv0"]
+[gd_scene load_steps=18 format=3 uid="uid://df4bay8fugxv0"]
+
+[ext_resource type="Script" uid="uid://cxaqtbiqgan1y" path="res://scenes/torch.gd" id="1_d4v33"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mujnc"]
 albedo_color = Color(0.49, 0.3185, 0, 1)
@@ -62,22 +64,133 @@ disable_receive_shadows = true
 material = SubResource("StandardMaterial3D_56x38")
 size = Vector3(0.01, 0.01, 0.01)
 
+[sub_resource type="Animation" id="Animation_my26j"]
+resource_name = "flicker"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.8, 0.4, 0.8, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.466667, 0, 1), Color(1, 0.366667, 0, 1), Color(1, 0.466667, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MeshInstance3D2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.120077, -0.206523, -0.132349), Vector3(-0.101, -0.179, -0.1), Vector3(-0.062, -0.162, -0.068), Vector3(-0.106, -0.174, -0.1), Vector3(-0.120077, -0.206523, -0.132349)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../MeshInstance3D2:mesh:material:albedo_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.65, 0, 1), Color(1, 0.5, 0, 1), Color(1, 0.65, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o2tjn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.533333, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MeshInstance3D2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.120077, -0.206523, -0.132349)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../MeshInstance3D2:mesh:material:albedo_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.65, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r3k50"]
+_data = {
+&"RESET": SubResource("Animation_o2tjn"),
+&"flicker": SubResource("Animation_my26j")
+}
+
 [node name="torch" type="Node3D"]
+script = ExtResource("1_d4v33")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 1.68959e-08, -1.59995e-09, -1.59995e-09, 0.141481, 0.0866025, 5.97109e-09, -0.245052, 0.05, -2.14361e-09, 0.04904, 0)
+cast_shadow = 0
 mesh = SubResource("CylinderMesh_mc4vk")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.120077, 1.23316e-08, -2.11752e-09, -1.92117e-09, -3.57628e-07, 0.132349, -7.1699e-09, -0.206523, -1.86265e-08, -6.00916e-05, 0.18883, -0.315976)
+transform = Transform3D(-0.120077, 1.23317e-08, -3.45437e-16, 0, 9.02741e-09, 0.132349, -7.1699e-09, -0.206523, 5.78516e-09, -6.00916e-05, 0.18883, -0.315976)
 transparency = 0.16
 mesh = SubResource("PrismMesh_mm65q")
 skeleton = NodePath("../..")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 7.10543e-15, 3.55271e-15, -7.10543e-15, 1, -1.91069e-15, -3.55271e-15, 1.91069e-15, 1, 2.01081e-09, 0.214503, -0.281811)
-light_color = Color(1, 0.433333, 0, 1)
+light_color = Color(1, 0.533333, 0, 1)
 shadow_enabled = true
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
@@ -91,3 +204,9 @@ amount = 12
 lifetime = 1.5
 process_material = SubResource("ParticleProcessMaterial_nu2we")
 draw_pass_1 = SubResource("BoxMesh_5f25t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../OmniLight3D")
+libraries = {
+&"": SubResource("AnimationLibrary_r3k50")
+}

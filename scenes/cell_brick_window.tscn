@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://c33aod55opm21"]
 
 [ext_resource type="Script" uid="uid://cn4ptmbjg8oaa" path="res://scenes/cell.gd" id="1_cbivr"]
-[ext_resource type="Material" uid="uid://bq22wox10tiej" path="res://resources/gfx/materials/cell_brick.tres" id="2_ifyuy"]
-[ext_resource type="Material" uid="uid://bkm3hblgnbhid" path="res://resources/gfx/materials/cell_brick_window.tres" id="2_u7o86"]
-[ext_resource type="ArrayOccluder3D" uid="uid://cbh0qrry52jqs" path="res://resources/occluders/cell_face.occ" id="3_32v05"]
+[ext_resource type="Material" uid="uid://bq22wox10tiej" path="res://gfx/materials/cell_brick.tres" id="2_ifyuy"]
+[ext_resource type="Material" uid="uid://bkm3hblgnbhid" path="res://gfx/materials/cell_brick_window.tres" id="2_u7o86"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cbh0qrry52jqs" path="res://occluders/cell_face.occ" id="3_32v05"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_danl4"]
 material = ExtResource("2_ifyuy")

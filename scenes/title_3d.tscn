@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw77fc2ux06gd"]
+
+[ext_resource type="Script" uid="uid://bfki5qoind22" path="res://scenes/title_3d.gd" id="1_yygx0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcynp"]
+albedo_color = Color(0.64, 0.55808, 0.2304, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="TextMesh" id="TextMesh_4hxej"]
+material = SubResource("StandardMaterial3D_bcynp")
+text = "3D"
+
+[sub_resource type="Animation" id="Animation_yygx0"]
+resource_name = "speen"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nm0p3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6g35m"]
+_data = {
+&"RESET": SubResource("Animation_nm0p3"),
+&"speen": SubResource("Animation_yygx0")
+}
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_yygx0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("TextMesh_4hxej")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_6g35m")
+}
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.909287, -0.312111, 0.275289, 0, 0.661482, 0.749961, -0.41617, -0.68193, 0.601477, 0, 0.423003, 0.538602)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.179436)

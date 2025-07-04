@@ -1,12 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://0fgtpyd0kwk2"]
+[gd_scene load_steps=12 format=3 uid="uid://0fgtpyd0kwk2"]
 
 [ext_resource type="Script" uid="uid://dev3ojxc4hu7i" path="res://scenes/title.gd" id="1_0diwn"]
-[ext_resource type="AudioStream" uid="uid://lpybap357c6x" path="res://resources/audio/delve.mp3" id="1_wt1e6"]
-[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://resources/gfx/reggy.jpg" id="2_atr4u"]
-[ext_resource type="Texture2D" uid="uid://bw23yneaggp6t" path="res://resources/gfx/Screenshot from 2024-03-11 18-52-43.png" id="3_tpt1f"]
+[ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://gfx/sprites/reggy.jpg" id="2_atr4u"]
+[ext_resource type="AudioStream" uid="uid://cf0a0sjr6476c" path="res://audio/idkj2.ogg" id="2_pyl7j"]
+[ext_resource type="Texture2D" uid="uid://bw23yneaggp6t" path="res://gfx/ui/dinosaur_planet_sky.png" id="3_tpt1f"]
+[ext_resource type="PackedScene" uid="uid://cw77fc2ux06gd" path="res://scenes/title_3d.tscn" id="5_b3w7a"]
+[ext_resource type="PackedScene" uid="uid://bf4y26v170qvj" path="res://scenes/reggie_rotate.tscn" id="6_4rr2b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iwnrx"]
 font_size = 64
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4rr2b"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Environment" id="Environment_b3w7a"]
+glow_intensity = 8.0
+glow_strength = 2.0
+glow_bloom = 1.0
+glow_hdr_threshold = 0.47
+adjustment_enabled = true
+adjustment_brightness = 2.0
+adjustment_contrast = 2.0
+adjustment_saturation = 2.0
+
+[sub_resource type="World3D" id="World3D_4rr2b"]
+environment = SubResource("Environment_b3w7a")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yql1r"]
+viewport_path = NodePath("SubViewport2")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0diwn")
@@ -20,11 +41,12 @@ text = "Reggie Dungeon"
 label_settings = SubResource("LabelSettings_iwnrx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_wt1e6")
+stream = ExtResource("2_pyl7j")
 volume_db = -4.0
 autoplay = true
 
 [node name="Reggy" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(937, 532)
 scale = Vector2(0.478516, 0.485352)
 texture = ExtResource("2_atr4u")
@@ -35,10 +57,32 @@ position = Vector2(960, 536)
 texture = ExtResource("3_tpt1f")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 800.0
-offset_top = 894.0
-offset_right = 1076.0
-offset_bottom = 965.0
+offset_left = 826.0
+offset_top = 861.0
+offset_right = 1102.0
+offset_bottom = 932.0
 text = "Play Reggie Dungeon 3D"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(756, 142)
+texture = SubResource("ViewportTexture_4rr2b")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+own_world_3d = true
+world_3d = SubResource("World3D_4rr2b")
+transparent_bg = true
+scaling_3d_scale = 0.5
+size = Vector2i(128, 128)
+
+[node name="Node3D" parent="SubViewport" instance=ExtResource("5_b3w7a")]
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Node3D" parent="SubViewport2" instance=ExtResource("6_4rr2b")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = SubResource("ViewportTexture_yql1r")
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://sl43y870he2f"]
 
-[ext_resource type="Texture2D" uid="uid://dpmsayxi4bqqg" path="res://resources/gfx/blood.png" id="1_kl077"]
+[ext_resource type="Texture2D" uid="uid://dpmsayxi4bqqg" path="res://gfx/sprites/blood.png" id="1_kl077"]
 
 [sub_resource type="Curve" id="Curve_kl077"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 1, Vector2(0.50365, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.01471, 0.0, 1, 0]
