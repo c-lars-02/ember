@@ -21,16 +21,18 @@ material = SubResource("StandardMaterial3D_ln6b5")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bpsab"]
 height = 1.82
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Reggie" type="CharacterBody3D"]
 script = ExtResource("2_loc5f")
 
 [node name="reggy" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.91, 0)
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_e0pj0")
 
 [node name="reggy eyes" type="Camera3D" parent="."]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, 1.7, 0)
 current = true
+far = 128.0
 
 [node name="front cam" type="Camera3D" parent="reggy eyes"]
 transform = Transform3D(-1, -2.18557e-08, -9.32788e-08, -2.18557e-08, 1, 2.38419e-07, 9.32788e-08, 2.38419e-07, -1, 0, 0, -4)
@@ -40,19 +42,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.064)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="reggy eyes"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.295512, 0)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_3b88h")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.91, 0)
 light_color = Color(1, 0.75, 0, 1)
-light_energy = 2.0
+light_energy = 1.5
 light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+shadow_opacity = 0.6
 omni_range = 12.599
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 4.6, 0)
-light_color = Color(1, 0.466667, 0.36, 1)
-light_volumetric_fog_energy = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91, 0)

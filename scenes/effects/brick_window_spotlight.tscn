@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7ghw27cu28ub"]
+
+[ext_resource type="Texture2D" uid="uid://mouygtdlo5bh" path="res://gfx/textures/brick_window_projector_2.png" id="1_cigrh"]
+
+[node name="SpotLight3D" type="SpotLight3D"]
+transform = Transform3D(1, 3.62861e-08, -6.80837e-08, -3.62862e-08, -0.557571, -0.830129, -6.80836e-08, 0.830129, -0.557571, 0, 0, 0)
+light_color = Color(1, 0.2, 0, 1)
+light_energy = 8.0
+light_projector = ExtResource("1_cigrh")
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 32.0
+distance_fade_shadow = 32.0
+distance_fade_length = 8.0
+spot_range = 8.0
+spot_attenuation = 0.5
+spot_angle = 22.0

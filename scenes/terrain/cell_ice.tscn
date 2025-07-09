@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://dc8ba3qufdqae"]
+
+[ext_resource type="PackedScene" uid="uid://clskw70lcupwn" path="res://scenes/terrain/cell_brick.tscn" id="1_1nkmi"]
+[ext_resource type="Material" uid="uid://cqpyu3mcxsuka" path="res://gfx/materials/floor_ice.tres" id="2_ofcme"]
+[ext_resource type="Material" uid="uid://bfig6luigrg4b" path="res://gfx/materials/wall_ice.tres" id="3_jv8n8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jr7w2"]
+material = ExtResource("2_ofcme")
+size = Vector2(3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5w337"]
+material = ExtResource("3_jv8n8")
+size = Vector2(3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_iu6n0"]
+material = ExtResource("3_jv8n8")
+size = Vector2(3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_180tx"]
+material = ExtResource("3_jv8n8")
+size = Vector2(3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_atxpu"]
+material = ExtResource("3_jv8n8")
+size = Vector2(3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2qmq5"]
+material = ExtResource("3_jv8n8")
+size = Vector2(3, 3)
+
+[node name="Node3D" instance=ExtResource("1_1nkmi")]
+
+[node name="floor" parent="." index="0"]
+mesh = SubResource("PlaneMesh_jr7w2")
+
+[node name="back" parent="." index="1"]
+mesh = SubResource("PlaneMesh_5w337")
+
+[node name="ceiling" parent="." index="2"]
+mesh = SubResource("PlaneMesh_iu6n0")
+
+[node name="left" parent="." index="3"]
+mesh = SubResource("PlaneMesh_180tx")
+
+[node name="front" parent="." index="4"]
+mesh = SubResource("PlaneMesh_atxpu")
+
+[node name="right" parent="." index="5"]
+mesh = SubResource("PlaneMesh_2qmq5")

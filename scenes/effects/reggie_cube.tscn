@@ -54,7 +54,7 @@ ambient_light_source = 2
 ambient_light_color = Color(0.7525, 0.67, 1, 1)
 ambient_light_energy = 0.33
 
-[node name="Node3D" type="Node3D"]
+[node name="ReggieCube" type="Node3D"]
 
 [node name="reggy_cube" type="Node3D" parent="."]
 script = ExtResource("1_4ju0m")

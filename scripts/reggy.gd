@@ -1,11 +1,14 @@
 extends CharacterBody3D
 
-var cell_size = 3
-var walkspeed = 4
-var turn_rate = PI / 2
+var walkspeed = 5
 var gravity = 9.81
 var sensitivity = 0.0015
+var mass = 1
+var tilesize = 1
 
+var forces = []
+
+signal touched(force)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,9 +17,10 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#position = Vector3($"../Dungeoneer".coordinates.x * cell_size, 0.91,  $"../Dungeoneer".coordinates.y * cell_size)
-	#rotation = Vector3(0, -$"../Dungeoneer".rotation, 0)
 	movement_3d(delta)
+	
+	if is_on_floor():
+		pass
 	
 	if Input.is_action_just_pressed("cam_1"):
 		$"reggy eyes".make_current()
@@ -33,32 +37,52 @@ func _unhandled_input(event: InputEvent) -> void: # TODO: Code taken from FPS mu
 
 
 func movement_3d(delta: float):
-	var walk_velocity = Vector3.ZERO
+	var walk_direction = Vector3.ZERO
 	
 	if Input.is_action_pressed("ui_up"):
-		walk_velocity -= Vector3.RIGHT.rotated(Vector3.UP, rotation.y)
+		walk_direction -= Vector3.RIGHT
 	if Input.is_action_pressed("ui_down"):
-		walk_velocity -= Vector3.LEFT.rotated(Vector3.UP, rotation.y)
+		walk_direction -= Vector3.LEFT
 	if Input.is_action_pressed("ui_left"):
-		walk_velocity -= Vector3.FORWARD.rotated(Vector3.UP, rotation.y)
+		walk_direction -= Vector3.FORWARD
 	if Input.is_action_pressed("ui_right"):
-		walk_velocity -= Vector3.BACK.rotated(Vector3.UP, rotation.y)
+		walk_direction -= Vector3.BACK
 	
-	walk_velocity = walk_velocity.normalized() * walkspeed
-	if Input.is_action_pressed("sprint"):
-		walk_velocity *= 2
-	velocity = walk_velocity
-	#if Input.is_action_just_pressed("jump"): TODO: JUMPING - ADD QUAKE SOUND
-		#velocity += 64 * Vector3.UP
-	velocity += gravity * Vector3.DOWN
+	walk_direction = walk_direction.rotated(Vector3.UP, rotation.y).normalized()
+	var walk_velocity = walk_direction * walkspeed
+	var velocity_2d = Vector2(velocity.x, velocity.z)
+	var walk_velocity_2d = Vector2(walk_velocity.x, walk_velocity.z)
+	
+	if walk_direction != Vector3.ZERO:
+		if velocity != walk_velocity:
+			velocity_2d = velocity_2d.move_toward(walk_velocity_2d, delta * 4)
+			velocity.x = velocity_2d.x
+			velocity.z = velocity_2d.y
+	else:
+		velocity_2d = velocity_2d.move_toward(Vector2.ZERO, delta * 5)
+		velocity.x = velocity_2d.x
+		velocity.z = velocity_2d.y
+	
+	velocity.y -= gravity * delta
+		
+	for force in forces:
+		print(force.magnitude)
+		velocity += force.direction * (force.magnitude/mass)
+		force.life -= delta
+		force.magnitude -= delta * force.decay
+		if force.life < 0:
+			forces.erase(force)
 	
 	move_and_slide()
 
 
-func _on_area_3d_area_entered(area: Area3D) -> void:
-	velocity = -velocity * 10
-	move_and_slide()
+func exert_force(force: Force):
+	forces.append(force)
 	$"reggy mouth".play()
+	spray_blood()
+	
+	
+func spray_blood():
 	$blood.emitting = true
 	await get_tree().create_timer(0.05).timeout
 	$blood.emitting = false

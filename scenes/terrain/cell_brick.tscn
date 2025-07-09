@@ -47,6 +47,7 @@ mesh = SubResource("PlaneMesh_aa7xv")
 skeleton = NodePath("../back")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ceiling"]
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling/StaticBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
@@ -62,11 +63,9 @@ mesh = SubResource("PlaneMesh_aa7xv")
 skeleton = NodePath("../front")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="left"]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="left/StaticBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
-visible = false
 shape = SubResource("BoxShape3D_xjq6r")
 disabled = true
 
@@ -80,11 +79,9 @@ mesh = SubResource("PlaneMesh_aa7xv")
 skeleton = NodePath("../back")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="front"]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="front/StaticBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
-visible = false
 shape = SubResource("BoxShape3D_xjq6r")
 disabled = true
 
@@ -98,11 +95,9 @@ mesh = SubResource("PlaneMesh_aa7xv")
 skeleton = NodePath("../left")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="right"]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="right/StaticBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
-visible = false
 shape = SubResource("BoxShape3D_xjq6r")
 disabled = true
 

@@ -1,0 +1,14 @@
+[gd_resource type="PlaneMesh" load_steps=3 format=3 uid="uid://n8pxrhmmsfse"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7snti"]
+load_path = "res://.godot/imported/brick.png-fb899a744423ae5d90ea0b2d55b7ee83.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0xfe"]
+albedo_color = Color(0.6, 1, 1, 1)
+albedo_texture = SubResource("CompressedTexture2D_7snti")
+anisotropy = 1.0
+texture_filter = 5
+
+[resource]
+material = SubResource("StandardMaterial3D_t0xfe")
+size = Vector2(3, 3)

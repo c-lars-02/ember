@@ -1,0 +1,101 @@
+[gd_scene load_steps=16 format=3 uid="uid://d2sffoco07p2f"]
+
+[ext_resource type="PackedScene" uid="uid://m870lfyhsesf" path="res://scenes/terrain/cell_brick_torch.tscn" id="1_0a7n1"]
+[ext_resource type="Material" uid="uid://cqpyu3mcxsuka" path="res://gfx/materials/floor_ice.tres" id="3_ofcme"]
+[ext_resource type="PlaneMesh" uid="uid://n8pxrhmmsfse" path="res://gfx/models/wall_ice.tres" id="5_atxpu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofcme"]
+albedo_color = Color(0.49, 0.429975, 0.3185, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jv8n8"]
+material = SubResource("StandardMaterial3D_ofcme")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3war"]
+shading_mode = 0
+albedo_color = Color(1, 0.65, 0, 1)
+disable_receive_shadows = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_ofcme"]
+material = SubResource("StandardMaterial3D_a3war")
+
+[sub_resource type="Gradient" id="Gradient_ofcme"]
+colors = PackedColorArray(0, 0.366667, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jv8n8"]
+gradient = SubResource("Gradient_ofcme")
+
+[sub_resource type="Gradient" id="Gradient_jpiw0"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wfg0n"]
+gradient = SubResource("Gradient_jpiw0")
+
+[sub_resource type="Curve" id="Curve_jpiw0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wfg0n"]
+curve = SubResource("Curve_jpiw0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ofcme"]
+emission_shape_scale = Vector3(0.06, 0.06, 0.06)
+emission_shape = 2
+emission_sphere_radius = 1.0
+angle_min = -600.7
+angle_max = -600.7
+direction = Vector3(0, 0, -1)
+spread = 16.0
+initial_velocity_min = 0.5
+initial_velocity_max = 1.5
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_wfg0n")
+color_initial_ramp = SubResource("GradientTexture1D_jv8n8")
+emission_curve = SubResource("CurveTexture_wfg0n")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.5
+collision_use_scale = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jv8n8"]
+material = ExtResource("3_ofcme")
+size = Vector2(3, 3)
+
+[node name="Node3D" instance=ExtResource("1_0a7n1")]
+
+[node name="front" parent="." index="0"]
+mesh = ExtResource("5_atxpu")
+
+[node name="torch" parent="front" index="1"]
+colors = [Color(0.62, 0.911333, 1, 1), Color(0.94, 1, 1, 1)]
+
+[node name="right" parent="." index="1"]
+mesh = ExtResource("5_atxpu")
+
+[node name="torch" parent="right" index="2"]
+colors = [Color(0.6, 0.946667, 1, 1), Color(1, 1, 1, 1)]
+
+[node name="back" parent="." index="2"]
+mesh = ExtResource("5_atxpu")
+
+[node name="torch" parent="back" index="2"]
+colors = [Color(0.6, 0.946667, 1, 1), Color(1, 1, 1, 1)]
+
+[node name="MeshInstance3D" parent="back/torch" index="0"]
+mesh = SubResource("CylinderMesh_jv8n8")
+
+[node name="MeshInstance3D2" parent="back/torch" index="1"]
+mesh = SubResource("PrismMesh_ofcme")
+
+[node name="GPUParticles3D" parent="back/torch" index="4"]
+process_material = SubResource("ParticleProcessMaterial_ofcme")
+
+[node name="left" parent="." index="3"]
+mesh = ExtResource("5_atxpu")
+
+[node name="torch" parent="left" index="2"]
+colors = [Color(0.6, 0.946667, 1, 1), Color(1, 1, 1, 1)]
+
+[node name="floor" parent="." index="4"]
+mesh = SubResource("PlaneMesh_jv8n8")
+
+[editable path="back/torch"]

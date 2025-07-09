@@ -15,6 +15,9 @@ subpixel_positioning = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cwep"]
 albedo_color = Color(0.741, 1, 0.63, 1)
+emission_enabled = true
+emission = Color(0.741176, 1, 0.631373, 1)
+emission_energy_multiplier = 0.5
 
 [sub_resource type="TextMesh" id="TextMesh_fcxnd"]
 material = SubResource("StandardMaterial3D_8cwep")
@@ -22,7 +25,10 @@ text = "wow!!"
 font = SubResource("SystemFont_rp0x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbcte"]
-albedo_color = Color(0.975333, 1, 0.63, 1)
+albedo_color = Color(1, 1, 0.63, 1)
+emission_enabled = true
+emission = Color(1, 1, 0.631373, 1)
+emission_energy_multiplier = 0.5
 
 [sub_resource type="TextMesh" id="TextMesh_uk63h"]
 material = SubResource("StandardMaterial3D_kbcte")
@@ -30,7 +36,10 @@ text = "wow!"
 font = SubResource("SystemFont_rp0x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tblm2"]
-albedo_color = Color(1, 0.8, 0.99, 1)
+albedo_color = Color(1, 0.78, 0.989, 1)
+emission_enabled = true
+emission = Color(1, 0.78, 0.989, 1)
+emission_energy_multiplier = 0.5
 
 [sub_resource type="TextMesh" id="TextMesh_4sc08"]
 material = SubResource("StandardMaterial3D_tblm2")

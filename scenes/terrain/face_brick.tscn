@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbb4tipjmqlo3"]
+
+[ext_resource type="Material" uid="uid://bq22wox10tiej" path="res://gfx/materials/cell_brick.tres" id="1_xc6x1"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cbh0qrry52jqs" path="res://occluders/cell_face.occ" id="2_17sae"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aa7xv"]
+material = ExtResource("1_xc6x1")
+size = Vector2(3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjq6r"]
+size = Vector3(1, 0, 1)
+
+[node name="front" type="MeshInstance3D"]
+transform = Transform3D(0, -1, 0, -4.37114e-08, 0, -1, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_aa7xv")
+skeleton = NodePath("../back")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("BoxShape3D_xjq6r")
+disabled = true
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("2_17sae")

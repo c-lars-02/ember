@@ -28,3 +28,7 @@ func toggle_wall(wall: int):
 	elif walls[wall] == 1:
 		wall_node.hide()
 		get_node(compass[wall] + "/StaticBody3D/CollisionShape3D").disabled = true
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print("he steppin on da bricks")

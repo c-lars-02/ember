@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://s3cdhipfrnhg"]
+
+[ext_resource type="PackedScene" uid="uid://dc8ba3qufdqae" path="res://scenes/terrain/cell_ice.tscn" id="1_1nkmi"]
+[ext_resource type="PackedScene" uid="uid://cl1g2j7unaih0" path="res://scenes/decor/torch_ice.tscn" id="2_0a7n1"]
+
+[sub_resource type="FogMaterial" id="FogMaterial_0a7n1"]
+density = 0.2
+
+[node name="Node3D" instance=ExtResource("1_1nkmi")]
+
+[node name="FogVolume" type="FogVolume" parent="floor" index="2"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5, 0)
+shape = 0
+material = SubResource("FogMaterial_0a7n1")
+
+[node name="torch" parent="back" index="2" instance=ExtResource("2_0a7n1")]
+
+[node name="torch" parent="left" index="2" instance=ExtResource("2_0a7n1")]
+
+[node name="torch" parent="front" index="2" instance=ExtResource("2_0a7n1")]
+
+[node name="torch" parent="right" index="2" instance=ExtResource("2_0a7n1")]

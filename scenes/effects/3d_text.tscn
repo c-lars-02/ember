@@ -49,7 +49,7 @@ _data = {
 &"speen": SubResource("Animation_yygx0")
 }
 
-[node name="Node3D" type="Node3D"]
+[node name="3dText" type="Node3D"]
 script = ExtResource("1_yygx0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
