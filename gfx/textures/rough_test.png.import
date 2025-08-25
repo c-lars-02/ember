@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvpc1qys76tcp"
 path.s3tc="res://.godot/imported/rough_test.png-0c46555b9feb05d6e9edf651864f5dbe.s3tc.ctex"
+path.etc2="res://.godot/imported/rough_test.png-0c46555b9feb05d6e9edf651864f5dbe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://gfx/textures/rough_test.png"
-dest_files=["res://.godot/imported/rough_test.png-0c46555b9feb05d6e9edf651864f5dbe.s3tc.ctex"]
+dest_files=["res://.godot/imported/rough_test.png-0c46555b9feb05d6e9edf651864f5dbe.s3tc.ctex", "res://.godot/imported/rough_test.png-0c46555b9feb05d6e9edf651864f5dbe.etc2.ctex"]
 
 [params]
 

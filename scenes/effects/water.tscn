@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1pmiqjva63qg"]
+
+[ext_resource type="Material" uid="uid://b4a2mxbx13ky4" path="res://scenes/effects/dirt.tres" id="1_ipk7c"]
+[ext_resource type="PlaneMesh" uid="uid://cd3efdrvxbsh2" path="res://scenes/effects/dirt_draw_pass.tres" id="2_erdtw"]
+
+[node name="water_particles" type="GPUParticles3D"]
+emitting = false
+amount = 32
+process_material = ExtResource("1_ipk7c")
+draw_pass_1 = ExtResource("2_erdtw")

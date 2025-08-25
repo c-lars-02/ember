@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SurfaceProperties" load_steps=2 format=3 uid="uid://bas7lmj50hyby"]
+
+[ext_resource type="Script" uid="uid://bm52w7fh0wguo" path="res://scripts/r_surface_properties.gd" id="1_0kxx2"]
+
+[resource]
+script = ExtResource("1_0kxx2")
+surface_type = ""
+walk_acceleration = 10.0
+stop_acceleration = 15.0
+jump_height = 8.0
+bounciness = 1.0

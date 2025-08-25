@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvt3f2a4ylhlr"]
+[gd_scene load_steps=12 format=3 uid="uid://cvt3f2a4ylhlr"]
 
 [ext_resource type="Texture2D" uid="uid://civ6p8kylik3g" path="res://gfx/sprites/reggy.jpg" id="1_d128c"]
 [ext_resource type="Script" uid="uid://1sxaujdp080j" path="res://scripts/reggy.gd" id="2_loc5f"]
 [ext_resource type="PackedScene" uid="uid://sl43y870he2f" path="res://scenes/effects/blood.tscn" id="3_hcwon"]
 [ext_resource type="AudioStream" uid="uid://dbwbmpitd3tlf" path="res://audio/Cowhurt2.ogg" id="4_u8bq0"]
+[ext_resource type="PackedScene" uid="uid://dvq87gnsq8a2r" path="res://scenes/effects/dirt.tscn" id="5_1ey2p"]
+[ext_resource type="PackedScene" uid="uid://b1pmiqjva63qg" path="res://scenes/effects/water.tscn" id="6_q575p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85ijx"]
 albedo_texture = ExtResource("1_d128c")
@@ -52,6 +54,10 @@ light_energy = 1.5
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 shadow_opacity = 0.6
+distance_fade_enabled = true
+distance_fade_begin = 32.0
+distance_fade_shadow = 32.0
+distance_fade_length = 8.0
 omni_range = 12.599
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -78,7 +84,13 @@ transform = Transform3D(0.990268, -0.139173, 0, 0.139173, 0.990268, 0, 0, 0, 1, 
 stream = ExtResource("4_u8bq0")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -1, 0)
-size = Vector3(9, 2, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector3(10, 1, 8)
+
+[node name="Particles" type="Node3D" parent="."]
+
+[node name="dirt_particles" parent="Particles" instance=ExtResource("5_1ey2p")]
+
+[node name="dirt_particles2" parent="Particles" instance=ExtResource("6_q575p")]
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

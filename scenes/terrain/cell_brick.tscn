@@ -1,15 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://clskw70lcupwn"]
+[gd_scene load_steps=10 format=3 uid="uid://clskw70lcupwn"]
 
 [ext_resource type="Script" uid="uid://cn4ptmbjg8oaa" path="res://scripts/cell.gd" id="1_6h6g0"]
 [ext_resource type="Material" uid="uid://bq22wox10tiej" path="res://gfx/materials/cell_brick.tres" id="2_7sx7f"]
+[ext_resource type="Script" uid="uid://beaekuof45c3d" path="res://scenes/terrain/floor.gd" id="3_7sx7f"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cbh0qrry52jqs" path="res://occluders/cell_face.occ" id="3_p0lig"]
+[ext_resource type="Resource" uid="uid://bas7lmj50hyby" path="res://data/surface_properties_normal.tres" id="4_p0lig"]
+[ext_resource type="Material" uid="uid://b4a2mxbx13ky4" path="res://scenes/effects/dirt.tres" id="5_c56jv"]
+[ext_resource type="PlaneMesh" uid="uid://cd3efdrvxbsh2" path="res://scenes/effects/dirt_draw_pass.tres" id="6_g1qhk"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_aa7xv"]
 material = ExtResource("2_7sx7f")
 size = Vector2(3, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xjq6r"]
-size = Vector3(1, 0, 1)
+size = Vector3(3, 0, 3)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6h6g0")
@@ -17,10 +21,13 @@ script = ExtResource("1_6h6g0")
 [node name="floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_aa7xv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+[node name="floor" type="StaticBody3D" parent="floor" groups=["floor"]]
+script = ExtResource("3_7sx7f")
+surface_properties = ExtResource("4_p0lig")
+particle_process_material = ExtResource("5_c56jv")
+particle_draw_pass = ExtResource("6_g1qhk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/floor"]
 shape = SubResource("BoxShape3D_xjq6r")
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="floor"]

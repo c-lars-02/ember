@@ -15,4 +15,5 @@ roughness_texture_channel = 4
 emission_energy_multiplier = 0.1
 anisotropy = 1.0
 subsurf_scatter_strength = 0.6
+refraction_scale = 0.1
 texture_filter = 5

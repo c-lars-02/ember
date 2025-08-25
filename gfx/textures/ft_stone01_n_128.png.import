@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy7dtty0bcu2u"
 path.s3tc="res://.godot/imported/ft_stone01_n_128.png-38ed8b1e55364cb4b8a101299447a8d0.s3tc.ctex"
+path.etc2="res://.godot/imported/ft_stone01_n_128.png-38ed8b1e55364cb4b8a101299447a8d0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://gfx/textures/ft_stone01_n_128.png"
-dest_files=["res://.godot/imported/ft_stone01_n_128.png-38ed8b1e55364cb4b8a101299447a8d0.s3tc.ctex"]
+dest_files=["res://.godot/imported/ft_stone01_n_128.png-38ed8b1e55364cb4b8a101299447a8d0.s3tc.ctex", "res://.godot/imported/ft_stone01_n_128.png-38ed8b1e55364cb4b8a101299447a8d0.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bptnuy2emkalw"
 path.s3tc="res://.godot/imported/brick_window_projector.png-264eda012de5da47364216ce7557078b.s3tc.ctex"
+path.etc2="res://.godot/imported/brick_window_projector.png-264eda012de5da47364216ce7557078b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://gfx/textures/brick_window_projector.png"
-dest_files=["res://.godot/imported/brick_window_projector.png-264eda012de5da47364216ce7557078b.s3tc.ctex"]
+dest_files=["res://.godot/imported/brick_window_projector.png-264eda012de5da47364216ce7557078b.s3tc.ctex", "res://.godot/imported/brick_window_projector.png-264eda012de5da47364216ce7557078b.etc2.ctex"]
 
 [params]
 

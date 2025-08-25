@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyf8s0cjf428n"
 path.s3tc="res://.godot/imported/reggy_small.png-df9e852abcf83d3707fddf856856d43f.s3tc.ctex"
+path.etc2="res://.godot/imported/reggy_small.png-df9e852abcf83d3707fddf856856d43f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://gfx/sprites/reggy_small.png"
-dest_files=["res://.godot/imported/reggy_small.png-df9e852abcf83d3707fddf856856d43f.s3tc.ctex"]
+dest_files=["res://.godot/imported/reggy_small.png-df9e852abcf83d3707fddf856856d43f.s3tc.ctex", "res://.godot/imported/reggy_small.png-df9e852abcf83d3707fddf856856d43f.etc2.ctex"]
 
 [params]
 

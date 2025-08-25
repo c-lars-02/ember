@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2fycn7aw4171"
 path.s3tc="res://.godot/imported/redbrick01_c_128.png-1975ea8f154c0c4948ee9a902eb4e421.s3tc.ctex"
+path.etc2="res://.godot/imported/redbrick01_c_128.png-1975ea8f154c0c4948ee9a902eb4e421.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://gfx/textures/redbrick01_c_128.png"
-dest_files=["res://.godot/imported/redbrick01_c_128.png-1975ea8f154c0c4948ee9a902eb4e421.s3tc.ctex"]
+dest_files=["res://.godot/imported/redbrick01_c_128.png-1975ea8f154c0c4948ee9a902eb4e421.s3tc.ctex", "res://.godot/imported/redbrick01_c_128.png-1975ea8f154c0c4948ee9a902eb4e421.etc2.ctex"]
 
 [params]
 

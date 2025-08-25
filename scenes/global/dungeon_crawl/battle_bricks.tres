@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c2obwc7lffbxu"]
+
+[ext_resource type="Texture2D" uid="uid://bosoi2dxvcmvh" path="res://gfx/textures/brick.png" id="1_0vm68"]
+[ext_resource type="Texture2D" uid="uid://d3g0ue83nu3fi" path="res://gfx/textures/brick_specular.png" id="2_hwcn7"]
+
+[resource]
+albedo_texture = ExtResource("1_0vm68")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_hwcn7")
+anisotropy = 1.0
+uv1_scale = Vector3(3, 3, 3)
+texture_filter = 5

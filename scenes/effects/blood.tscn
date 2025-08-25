@@ -36,7 +36,7 @@ collision_friction = 0.6
 collision_bounce = 0.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uli77"]
-transparency = 1
+transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_kl077")
 billboard_mode = 3

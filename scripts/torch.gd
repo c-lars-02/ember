@@ -13,7 +13,10 @@ func _process(delta: float):
 	pass
 
 
-func torch_flicker(color_start: Color, color_end: Color):
+func torch_flicker(color_start: Color, color_end: Color): # TODO: Optimize, tween light distance
+	$OmniLight3D.light_color = color_end
+	$MeshInstance3D2.mesh.material.albedo_color = color_end
+	$MeshInstance3D2.scale = Vector3(-0.12, -0.20, -0.13) * 0.5
 	tween.set_loops()
 	tween.tween_property($OmniLight3D, "light_color", color_start, 2)
 	tween.parallel().tween_property($MeshInstance3D2, "mesh:material:albedo_color", color_start, 2)

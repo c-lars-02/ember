@@ -1,16 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://m870lfyhsesf"]
+[gd_scene load_steps=11 format=3 uid="uid://m870lfyhsesf"]
 
 [ext_resource type="Script" uid="uid://cn4ptmbjg8oaa" path="res://scripts/cell.gd" id="1_ic84h"]
 [ext_resource type="Material" uid="uid://bq22wox10tiej" path="res://gfx/materials/cell_brick.tres" id="1_t6upx"]
 [ext_resource type="ArrayOccluder3D" uid="uid://v8vtmclhng04" path="res://occluders/cell_brick_torch.occ" id="3_jpiw0"]
 [ext_resource type="PackedScene" uid="uid://df4bay8fugxv0" path="res://scenes/decor/torch.tscn" id="3_wfg0n"]
+[ext_resource type="Script" uid="uid://beaekuof45c3d" path="res://scenes/terrain/floor.gd" id="5_kenva"]
+[ext_resource type="Resource" uid="uid://bas7lmj50hyby" path="res://data/surface_properties_normal.tres" id="6_cbmm3"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4wxu7"]
 material = ExtResource("1_t6upx")
 size = Vector2(3, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_la44y"]
-size = Vector3(1, 0, 1)
+size = Vector3(3, 0, 3)
 
 [sub_resource type="ArrayOccluder3D" id="ArrayOccluder3D_encny"]
 vertices = PackedVector3Array(1.5, 0, 1.5, -1.5, 0, 1.5, 1.5, 0, -1.5, -1.5, 0, -1.5)
@@ -97,10 +99,11 @@ occluder = ExtResource("3_jpiw0")
 [node name="floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_4wxu7")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+[node name="floor" type="StaticBody3D" parent="floor" groups=["floor"]]
+script = ExtResource("5_kenva")
+surface_properties = ExtResource("6_cbmm3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/floor"]
 shape = SubResource("BoxShape3D_la44y")
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="floor"]

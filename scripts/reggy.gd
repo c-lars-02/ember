@@ -6,6 +6,11 @@ var sensitivity = 0.0015
 var mass = 1
 var tilesize = 1
 
+var walk_acceleration: float
+var stop_acceleration: float
+
+var last_surface: int = -1
+
 var forces = []
 
 signal touched(force)
@@ -18,9 +23,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	movement_3d(delta)
-	
-	if is_on_floor():
-		pass
 	
 	if Input.is_action_just_pressed("cam_1"):
 		$"reggy eyes".make_current()
@@ -55,14 +57,14 @@ func movement_3d(delta: float):
 	
 	if walk_direction != Vector3.ZERO:
 		if velocity != walk_velocity:
-			velocity_2d = velocity_2d.move_toward(walk_velocity_2d, delta * 4)
+			velocity_2d = velocity_2d.move_toward(walk_velocity_2d, delta * walk_acceleration * walkspeed)
 			velocity.x = velocity_2d.x
 			velocity.z = velocity_2d.y
 	else:
-		velocity_2d = velocity_2d.move_toward(Vector2.ZERO, delta * 5)
+		velocity_2d = velocity_2d.move_toward(Vector2.ZERO, delta * stop_acceleration * walkspeed)
 		velocity.x = velocity_2d.x
 		velocity.z = velocity_2d.y
-	
+			
 	velocity.y -= gravity * delta
 		
 	for force in forces:
@@ -74,6 +76,29 @@ func movement_3d(delta: float):
 			forces.erase(force)
 	
 	move_and_slide()
+	
+	var on_surface = null
+	for i in get_slide_collision_count():
+		var collider = get_slide_collision(i).get_collider()
+		if collider.is_in_group("floor"):
+			on_surface = collider.surface_properties
+			walk_acceleration = on_surface.walk_acceleration
+			stop_acceleration = on_surface.stop_acceleration
+		if on_surface:
+			walk_particles(on_surface.surface_type)
+
+func walk_particles(on_surface_type): # TODO: cleanup, choose better var names
+	var particles_old = $Particles.get_child(last_surface)
+	var particles_new = $Particles.get_child(on_surface_type)
+	if on_surface_type != last_surface:
+		particles_old.emitting = false
+		last_surface = on_surface_type
+	
+	if velocity.length() < 0.05:
+		particles_new.emitting = false
+	else:
+		particles_new.amount_ratio = abs(velocity.length() / walkspeed / 2)
+		particles_new.emitting = true
 
 
 func exert_force(force: Force):

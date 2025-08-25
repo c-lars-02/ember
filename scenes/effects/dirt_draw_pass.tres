@@ -1,0 +1,14 @@
+[gd_resource type="PlaneMesh" load_steps=3 format=3 uid="uid://cd3efdrvxbsh2"]
+
+[ext_resource type="Texture2D" uid="uid://chef2qm5i6sr0" path="res://gfx/sprites/generic_particle.png" id="1_kubjc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3i4c7"]
+transparency = 4
+albedo_color = Color(0.5, 0.975, 1, 1)
+albedo_texture = ExtResource("1_kubjc")
+billboard_mode = 1
+
+[resource]
+material = SubResource("StandardMaterial3D_3i4c7")
+size = Vector2(0.25, 0.25)
+orientation = 2

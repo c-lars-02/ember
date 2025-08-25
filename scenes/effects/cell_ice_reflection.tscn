@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpycevg33xred"]
+
+[ext_resource type="Texture2D" uid="uid://cnwn82k005bpm" path="res://gfx/textures/ft_stone01_c_128_reflect.png" id="1_yoo7s"]
+[ext_resource type="Texture2D" uid="uid://blqmrxhnxmnio" path="res://gfx/textures/ft_stone01_n_128_reflect.png" id="2_5skdq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aok11"]
+albedo_color = Color(0.5, 1, 1, 1)
+albedo_texture = ExtResource("1_yoo7s")
+metallic = 0.1
+roughness = 0.6
+normal_enabled = true
+normal_texture = ExtResource("2_5skdq")
+anisotropy = 1.0
+texture_filter = 5
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yskcg"]
+material = SubResource("StandardMaterial3D_aok11")
+size = Vector2(3, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_yskcg")

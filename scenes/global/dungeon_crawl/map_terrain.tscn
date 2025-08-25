@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://7u2av8cmlaao"]
+[gd_scene load_steps=4 format=4 uid="uid://bbkjsggryi2jl"]
 
-[ext_resource type="Texture2D" uid="uid://ck5akjsksj646" path="res://gfx/tiles/tilesheet_complete.png" id="1_0boiq"]
-[ext_resource type="Texture2D" uid="uid://dxm663hpvtat1" path="res://gfx/tiles/actor_tiles_small_2.png" id="2_hvf6f"]
+[ext_resource type="Texture2D" uid="uid://ck5akjsksj646" path="res://gfx/tiles/tilesheet_complete.png" id="1_wn2ba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qqk3y"]
-texture = ExtResource("1_0boiq")
+texture = ExtResource("1_wn2ba")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -281,27 +280,6 @@ custom_data_layer_0/name = "material"
 custom_data_layer_0/type = 4
 sources/0 = SubResource("TileSetAtlasSource_qqk3y")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2gao8"]
-texture = ExtResource("2_hvf6f")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/custom_data_0 = "skeleton_boost"
-1:0/0 = 0
-1:0/0/custom_data_0 = "skeleton_bounce"
-2:0/0 = 0
-2:0/0/custom_data_0 = "skeleton_0"
-3:0/0 = 0
-3:0/0/custom_data_0 = "chest_0"
-
-[sub_resource type="TileSet" id="TileSet_lfpfr"]
-tile_size = Vector2i(64, 64)
-custom_data_layer_0/name = "actor_type"
-custom_data_layer_0/type = 4
-sources/0 = SubResource("TileSetAtlasSource_2gao8")
-
 [node name="terrain" type="TileMapLayer"]
 tile_map_data = PackedByteArray("AAAAAAAAAAAQAAUAAAAAAAEAAAAQAAUAAAABAAEAAAAQAAUAAAABAAIAAAAVAAkAAAACAAIAAAAQAAUAAAACAAEAAAAQAAUAAAACAAMAAAAQAAUAAAABAAQAAAARAAUAAAACAAQAAAAQAAUAAAADAAQAAAARAAUAAAACAAUAAAARAAUAAAA=")
 tile_set = SubResource("TileSet_lb3ms")
-
-[node name="actors" type="TileMapLayer" parent="."]
-tile_set = SubResource("TileSet_lfpfr")

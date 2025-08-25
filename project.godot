@@ -25,6 +25,10 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
 
+[global_group]
+
+floor="surfaces that can be walked on; expected to have a surface_properties resource."
+
 [input]
 
 ui_accept={
@@ -120,10 +124,7 @@ pause={
 
 [rendering]
 
-lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
-lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
-lights_and_shadows/positional_shadow/atlas_16_bits=false
+textures/vram_compression/import_etc2_astc=true
 textures/default_filters/anisotropic_filtering_level=4
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 occlusion_culling/use_occlusion_culling=true
-lights_and_shadows/positional_shadow/atlas_size=8192

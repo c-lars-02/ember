@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvq87gnsq8a2r"]
+
+[ext_resource type="Material" uid="uid://b4a2mxbx13ky4" path="res://scenes/effects/dirt.tres" id="1_bevgy"]
+[ext_resource type="Texture2D" uid="uid://chef2qm5i6sr0" path="res://gfx/sprites/generic_particle.png" id="1_p1m8g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bevgy"]
+transparency = 4
+albedo_color = Color(0.64, 0.512, 0.32, 1)
+albedo_texture = ExtResource("1_p1m8g")
+billboard_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3i4c7"]
+material = SubResource("StandardMaterial3D_bevgy")
+size = Vector2(0.2, 0.2)
+orientation = 2
+
+[node name="dirt_particles" type="GPUParticles3D"]
+emitting = false
+amount = 32
+process_material = ExtResource("1_bevgy")
+draw_pass_1 = SubResource("PlaneMesh_3i4c7")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://e2hy72difagv"]
+
+[ext_resource type="PackedScene" uid="uid://bbkjsggryi2jl" path="res://scenes/global/dungeon_crawl/map_terrain.tscn" id="1_len44"]
+[ext_resource type="PackedScene" uid="uid://bkyepsu50jtvv" path="res://scenes/global/dungeon_crawl/map_actors.tscn" id="2_a3fo6"]
+
+[node name="map" type="Node"]
+
+[node name="terrain" parent="." instance=ExtResource("1_len44")]
+
+[node name="actors" parent="." instance=ExtResource("2_a3fo6")]
+tile_map_data = PackedByteArray(0, 0, 2, 0, 4, 0, 0, 0, 2, 0, 0, 0, 0, 0)

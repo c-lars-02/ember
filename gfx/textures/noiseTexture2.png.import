@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://di73w1oq0k5y3"
 path.s3tc="res://.godot/imported/noiseTexture2.png-53eb3be62e80ef9883b9403d029582b3.s3tc.ctex"
+path.etc2="res://.godot/imported/noiseTexture2.png-53eb3be62e80ef9883b9403d029582b3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://gfx/textures/noiseTexture2.png"
-dest_files=["res://.godot/imported/noiseTexture2.png-53eb3be62e80ef9883b9403d029582b3.s3tc.ctex"]
+dest_files=["res://.godot/imported/noiseTexture2.png-53eb3be62e80ef9883b9403d029582b3.s3tc.ctex", "res://.godot/imported/noiseTexture2.png-53eb3be62e80ef9883b9403d029582b3.etc2.ctex"]
 
 [params]
 
